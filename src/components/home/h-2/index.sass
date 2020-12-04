@@ -1,0 +1,31 @@
+.sabeco-home-2
+	border-bottom: 1px solid rgba($main, 0.28)
+	.menu-list
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap 
+		li 
+			position: relative
+			padding-left: 25px
+			width: 100%
+			&::before
+				content: url('../img/arrow/button-red-arrow-right.png')
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+			a 
+				font-size: 16px
+				font-weight: 400
+				color: $black 
+				transition: .2s ease-in-out all
+				text-transform: uppercase
+				&:hover 
+					color: $main
+	@media(min-width: 768px)
+		.menu-list 
+			li 
+				width: auto 
+	@media(min-width: 1280px)
+		padding: 43px 0

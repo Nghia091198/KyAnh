@@ -1,0 +1,284 @@
+header
+	// background-color: rgba(#ffffff,0.75)
+	color: #ffffff
+	padding-top: 15px
+	position: fixed
+	z-index: 9999
+	width: 100%
+	left: 0
+	right: 0
+	top: 0
+	height: 120px
+	border-bottom: 1px solid rgba($white, 0.5)
+	max-width: $layout
+	margin-left: auto
+	margin-right: auto
+	.header-about
+		display: flex
+		position: relative
+		justify-content: flex-end
+		@media screen and ( max-width: 1200px )
+			justify-content: flex-start
+		.header-left
+			position: absolute
+			height: 120px
+			width: 120px
+			left: 0
+			@media screen and ( max-width: 1200px )
+				left: 50%
+				transform: translateX(-50%)
+			a
+				display: block
+			img
+				width: 100%
+				height: 100%
+		.header-right
+			@media screen and ( max-width: 1200px )
+				padding-top: 20px
+			.header-top
+				display: flex
+				padding-top: 10px
+				@media screen and ( max-width: 1200px )
+					padding-top: 10px
+			.phone
+				background-color: #0066cc
+				display: flex
+				align-items: center
+				justify-content: start
+				padding-left: 15px
+				width: 180px
+				height: 40px
+				border-radius: 25px
+				border-bottom-left-radius: 0
+				em
+					padding-right: 10px
+				*
+					color: white
+					font-weight: bold
+					font-size: 16px
+			.search
+				background-color: #66ccff
+				width: 40px
+				height: 40px
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 50%
+				border-bottom-right-radius: 0
+				margin: 0 15px
+				cursor: pointer
+			.language
+				position: relative
+				display: flex
+				align-items: center
+				*
+					font-size: 12px
+					color: white
+				.item
+					position: relative
+					&::before
+						content: "\F0140"
+						position: absolute
+						font: normal normal normal 24px/1 "Material Design Icons"
+						right: -18px
+						top: 50%
+						transform: translateY(-50%)
+						font-size: 18px
+				.dropdown
+					width: max-content
+					position: absolute
+					background-color: white
+					display: none
+					padding: 5px
+					top: 70%
+					span
+						color: #111111
+				&:hover
+					cursor: pointer
+					.dropdown
+						display: flex
+					.item
+						&::before
+							transform: rotate(180deg)
+							transition: .25s all ease-in-out
+							top: 0
+	.header-bottom
+		padding-left: 140px
+
+.primary-menu
+	display: flex
+	justify-content: flex-start
+	padding-top: 15px
+	@media screen and ( max-width: 1200px )
+		position: fixed
+		right: 0
+		top: -100%
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		transition: .3s all ease-in-out
+		transform: translateY(-70%)
+	ul
+		display: flex
+		list-style-type: none
+		@media screen and ( max-width: 1200px )
+			flex-direction: column
+			width: 100%
+			align-items: center
+			padding-left: 0
+		li
+			margin-right: 25/16*1rem
+			@media screen and ( max-width: 1200px )
+				margin-right: 0
+			&:last-child
+				margin-right: 0
+			.title
+				a
+					display: inline-block
+					font-size: 16px
+					color: white
+					text-transform: uppercase
+					@media screen and ( max-width: 1200px )
+						font-size: 22/16*1rem
+						margin-bottom: 20/16*1rem
+			.sub-menu
+				display: flex
+				flex-direction: column
+				justify-content: center 
+				opacity: 0
+				visibility: hidden
+				position: absolute
+				top: 250%
+				width: max-content
+				height: auto
+				background-color: white
+				padding: 25px
+				transition: .3s all ease-in-out
+				@media screen and ( max-width: 1200px )
+					display: none
+				li
+					color: black
+					a
+						display: inline-block
+						position: relative
+						&::before
+							content: ""
+							width: 0
+							height: 2px
+							bottom: 0
+							background-color: black
+							position: absolute
+							transition: .3s all ease-in-out
+						&:hover
+							&::before
+								transition: .3s all ease-in-out
+								width: 100%
+			&.dropdown
+				position: relative
+				cursor: pointer
+				&:hover
+					.sub-menu
+						opacity: 1
+						visibility: visible
+						transition: .3s all ease-in-out
+						top: 100%
+		@media screen and ( max-width: 1200px )
+			.mobile-wrap
+				position: fixed
+				right: 0
+				top: 120px
+	&.active
+		width: 100%
+		background-color: rgba($black, 0.6)
+		color: white
+		top: 120px
+		transform: translateY(0)
+		transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		opacity: 1
+		visibility: visible
+		height: 100%
+.toggle-menu
+	@media screen and ( min-width: 1200.1px )
+		display: none
+	width: 30px
+	height: 30px
+	padding: 0
+	cursor: pointer
+	position: absolute
+	transition: .3s all ease-in-out
+	margin-left: auto
+	right: 70px
+	top: 50%
+	transform: translateY(-50%)
+	span
+		position: absolute
+		width: 100%
+		display: block
+		height: 3px
+		background-color: #2e3192
+		transform: rotate(0deg)
+		transition: .4s all ease-in-out
+		left: 0
+		&:first-child
+			top: 0
+		&:nth-child(2),
+		&:nth-child(3)
+			top: 10px
+		&:last-child
+			top: 20px
+	&.active
+		span
+			&:first-child,
+			&:last-child
+				left: 50%
+				width: 0
+			&:nth-child(2)
+				transform: rotate(45deg)
+			&:nth-child(3)
+				transform: rotate(-45deg)
+.mobile-wrap
+	opacity: 0
+	top: 0
+	transition: .3s all ease-in-out
+	&.active
+		opacity: 1
+		top: 100%
+		transition: .3s all ease-in-out
+#search
+	background: rgba(0,0,0,.7)
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: -100%
+	transition: .4s all ease-in-out
+	display: flex
+	align-items: center
+	justify-content: center
+	.btn-close
+		position: absolute
+		right: 30px
+		top: 50px
+		display: flex
+		font-size: 23px
+		font-weight: 600
+		color: black
+		border-radius: 50%
+		background-color: white 
+		align-items: center
+		justify-content: center 
+		z-index: 999
+		width: 40px
+		height: 40px
+		cursor: pointer
+	&.active
+		left: 0
+		transition: .4s all ease-in-out
+	.form-group
+		em
+			margin-left: -30px
+			color: black
+		input
+			border-radius: 25px
+			border: unset
+			padding-left: 15px

@@ -1,0 +1,138 @@
+.news-item
+	.image
+		+img-scale(207/306)
+	.caption
+		margin-top: 20px
+		.title
+			font-size: r(20px)
+			font-weight: 400
+			color: $gray
+			transition: .2s ease-in-out all
+			+line(3)
+		.des
+			margin-top: 20px
+			font-size: r(18px)
+
+	&:hover
+		.caption
+			.title
+				color: $main
+.contact-item
++ .contact-item
+	margin-top: 30px
+	.image
+		+img-scale(134/443)
+	.caption
+		margin-top: 20px
+		.title
+			font-size: r(20px)
+			font-weight: 700
+			color: $main
+			line-height: 1.3
+		address
+			font-size: r(20px)
+			font-weight: 400
+			color: $gray
+			line-height: 1.3
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				margin-top: 15px
+				font-size: r(20px)
+				font-weight: 400
+				color: $gray
+				strong
+					color: $main
+.calendar-item
+	background-color: #f3f3f3
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 10px
+	padding-left: 20px
+	padding-right: 0px
+	// TimeFormat |AU|/|G29|
+	@media screen and ( max-width: 375.98px )
+		.square-date
+			font-size: r(33px) !important
+		span
+			font-size: r(57px) !important
+	& + .calendar-item
+		margin-top: 34px
+	.square-date
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		color: $main
+		font-size: r(28px)
+		font-weight: 400
+		text-transform: uppercase
+		letter-spacing: 0.28px
+		padding-right: 15px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			right: -5px
+			top: 50%
+			transform: translateY(-50%)
+			width: 7px
+			height: 58px
+			background-color: $main
+		span
+			font-size: r(45px)
+			font-weight: 900
+			letter-spacing: 0.45px
+			margin-top: -21px
+	.content
+		margin-left: 20px
+		color: $gray
+		font-size: r(20px)
+		font-weight: 400
+		letter-spacing: 0.4px
+		line-height: 1.1
+.job-filter-item 
+	padding-bottom: 20px
+	border-bottom: 1px solid $main
+	.title 
+		font-size: r(20px)
+		font-weight: 700
+		color: $gray 
+		line-height: 1.3
+		margin-top: 10px
+		display: block
+		transition: .2s ease-in-out all
+		&:hover 
+			color: $main
+	.location
+		display: flex
+		flex-wrap: wrap 
+		align-items: center
+		li 
+			font-size: r(20px)
+			font-weight: 400
+			position: relative
+			padding-right: 10px
+			margin-right: 10px
+			margin-top: 10px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				background: $gray 
+				width: 1px 
+				height: 20px
+			&:last-child
+				padding-right: 0
+				margin-right: 0
+				&::before
+					display: none
+	@media(min-width: 768px)
+		padding-bottom: 25px
+	@media(min-width: 1024px)
+		padding-bottom: 30px

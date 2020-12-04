@@ -1,0 +1,37 @@
+section.sabeco-home-3.main-section(setBackground="./img/bg-2.png")
+	.container
+		.row
+			.col-md-4
+				.box-content 
+					h2.main-title Our Brands
+					.des
+						h3 SAIGON SPECIAL - DIỆN MẠO MỚI, VẪN MỘT TÌNH YÊU ĐÍCH THỰC
+						p The unique taste of Saigon Beer is the inspiring taste combined with the spirit of Saigonese’s generosity and the rich of the Southern land, making it an in dispensable part of everyday life.felis, ultrici nech pelew llentesque eu, pretium quissem. Nullam dictumifi felis eutuo pede wo llis pretium our integer.
+					.button 
+						a(href="#").btn-view-more Discover more
+							img(src="./img/arrow/button-arrow-right.png", alt="")
+				.main-slide-thumbs 
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.image
+									img(src="./img/2.png", alt="")
+							.swiper-slide
+								.image
+									img(src="./img/3.png", alt="")
+							.swiper-slide
+								.image
+									img(src="./img/4.png", alt="")
+			.col-md-4
+				.main-slide-top 
+					.swiper-container
+						.swiper-wrapper
+							- for (i=1; i<4; i++)
+								.swiper-slide
+									.image
+										img(src="./img/1.png", alt="")
+					.main-button 
+						.button-prev
+							img(src="./img/arrow/button-circle-red-left.png", alt="")
+						.button-next
+							img(src="./img/arrow/button-circle-red-right.png", alt="")
