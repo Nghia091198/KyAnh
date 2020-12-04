@@ -16,7 +16,7 @@
 	.btn
 		margin-top: 40/16*1rem
 .section-devices
-	.swiper-devices
+	.swiper-devices,.swiper-cosmetic
 		position: relative
 	.main-button
 		position: absolute
@@ -78,6 +78,43 @@
 		margin: 50/16*1rem auto 0
 .section-repair
 	padding-top: 60/16*1rem
+	.repair-item
+		.fancy
+			display: flex
+			position: relative
+			justify-content: center
+			align-items: center
+			max-width: 630px
+			height: 440px
+			@media screen and (max-width: 1023.9px)
+				max-width: 100%
+			img
+				width: 100%
+				height: 100%
+			.play
+				position: absolute
+				width: 75px
+				height: 75px
+				border-radius: 50%
+				opacity: 0
+				visibility: hidden
+				transition: .2s all ease-in-out
+				background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+				&:before
+					content: "\F040D";
+					font: normal normal normal 24px/1 "Material Design Icons"
+					font-size: 60px
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+					color: white
+					position: absolute
+					// display: none
+			&:hover
+				.play
+					opacity: 1
+					visibility: visible
+					transition: .2s all ease-in-out
 	.repair-content
 		border-radius: 15px
 		box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.05)
@@ -85,11 +122,16 @@
 		height: 340px
 		padding: 40/16*1rem
 		width: 630px
+		@media screen and (max-width: 1023.9px)
+			width: 100%
+			border-radius: 0
 		@media screen and ( min-width: 1024.1px )
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
 			left: -20px
+		@media screen and (max-width: 480px)
+			padding: 20/16*1rem
 		*
 			color: white
 		.title-sub
@@ -105,6 +147,9 @@
 		.content
 			font-size: 1rem
 			font-weight: 400
+			@media screen and (max-width: 480px)
+				height: 200px
+				overflow: scroll
 		.bg-content
 			background: url("../img/bg.png") no-repeat
 			position: absolute
@@ -114,4 +159,36 @@
 			width: 100%
 			background-position-x: right
 			background-position-y: bottom
-
+.section-timerepair
+	padding-top: 40/16*1rem
+	.timeto
+		width: 100%
+		height: 100%
+		border-radius: 15px
+		background-color: #f6fcff
+		padding: 30/16*1rem
+		display: block
+		overflow: hidden
+		background: url("../img/bg.png") no-repeat
+		background-position-y: 120%
+		background-position-x: 150%
+		position: relative
+		transition: all .2s ease-in-out
+		.time
+			font-size: 30/16*1rem
+			font-weight: 700
+			color: #1974d2
+		&:hover
+			transition: all .2s ease-in-out
+			box-shadow: 9px 12px 30px rgba(0,0,0,0.05)
+			background:  linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+			*
+				color: white
+	[class*="col-"]:nth-child(n+3)
+		@media screen and (max-width: 1023.9px)
+			margin-top: 20px
+	[class*="col-"]:nth-child(n+2)
+		@media screen and (max-width: 767.9px)
+			margin-top: 20px
+.section-why
+	padding-top: 60/16*1rem
