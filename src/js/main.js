@@ -349,6 +349,96 @@ function swiperInit() {
             },
         },
     });
+    var slideWhy = new Swiper(".swiper-why .swiper-container", {
+        // slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        observeParents: true,
+        navigation: {
+            nextEl: ".swiper-why .button-next",
+            prevEl: ".swiper-why .button-prev",
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: true,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 0,
+                slidesPerView: 5,
+                centeredSlides: true,
+            },
+        },
+    });
+    var slidePartner = new Swiper(".swiper-partner .swiper-container", {
+        // slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        observeParents: true,
+        navigation: {
+            nextEl: ".swiper-partner .button-next",
+            prevEl: ".swiper-partner .button-prev",
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 6,
+                centeredSlides: false,
+            },
+        },
+    });
+    var slideNews = new Swiper(".swiper-news .swiper-container", {
+        // slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-news .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+        },
+    });
 }
 
 function pageBanner() {

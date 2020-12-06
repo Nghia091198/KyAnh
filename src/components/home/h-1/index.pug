@@ -54,11 +54,23 @@ section.section-timerepair
 						.desc đối với khu vực ngoại thành Hồ Chí Minh
 section.section-why
 	.container
+		.section-title.text-center TẠI SAO CHỌN KỲ ANH TECH
 		.swiper-why
 			.swiper-container
 				.swiper-wrapper
-					.swiper-slide
-						.why-item
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.why-item
+								.why-img
+									img(src="./img/home/8.png", alt="").swiper-lazy.swiper-lazy-loaded
+								.why-content
+									span.blue Hơn 10 năm 
+									span kinh nghiệm trong ngành
+			.main-button
+				.button-prev
+					em.mdi.mdi-chevron-left
+				.button-next
+					em.mdi.mdi-chevron-right
 section.section-devices
 	.container
 		.section-title.text-center Mỹ Phẩm
@@ -78,6 +90,42 @@ section.section-devices
 					em.mdi.mdi-chevron-right
 		a(href="").btn.gradient-border XEM tất cả
 			em.mdi.mdi-plus
+section.section-partner
+	.container
+		.box-title
+			.section-title Đối Tác
+			a(href="") Xem tất cả
+		.swiper-partner
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<6;i++)
+						.swiper-slide
+							a(href="").item
+								.img
+									img(src="./img/home/9.png", alt="").swiper-lazy.swiper-lazy-loaded
+			.main-button
+				.button-prev
+					img(src="./img/left.png", alt="")
+				.button-next
+					img(src="./img/right.png", alt="")
+section.section-news
+	.container
+		.section-title.text-center Tin Tức
+		.swiper-news
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							a(href="").item
+								.img
+									img(src="./img/home/10.png", alt="").swiper-lazy.swiper-lazy-loaded
+								.wrap-content
+									.title Trị nám với Laser Q Switch
+									.seemore
+										span Xem thêm
+										img(src="./img/right.png", alt="")
+
+			.swiper-pagination
 
 				
 
