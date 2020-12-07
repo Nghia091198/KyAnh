@@ -31,18 +31,16 @@ section.section-devices
 			em.mdi.mdi-plus
 section.section-repair
 	.container
-		.row
-			.col-lg-6.col-md-12
-				.repair-item
-					a.fancy(data-fancybox="gallery" href="./img/home/7.png")
-						img(src="./img/home/7.png", alt="").lazyloaded
-						.play
-			.col-lg-6.col-md-12
-				.repair-content
-					.bg-content
-					.title-sub Trung tâm sửa chữa - bảo trì kỳ anh
-					.title Đảm bảo phục vụ nhanh chóng
-					.content Mang lại sự an tâm phục vụ khách hàng trong từng dịch vụ có sử dụng thiết bị thẩm mỹ công nghệ cao trong và sau thời gian bảo hành. Đó cũng là  lý do quan trọng thúc đẩy KY ANH TECH xây dựng nên qui trình Bảo trì nhằm giúp cho các Thẩm mỹ viện/Spa vận hành trơn tru hơn trong quá trình kinh doanh của mình.
+		.on-row
+			.img
+				a.fancy(data-fancybox="video" href="./img/home/7.png")
+					img(src="./img/home/7.png", alt="").lazyloaded
+				.play
+			.repair-content
+				.bg-content
+				.title-sub Trung tâm sửa chữa - bảo trì kỳ anh
+				.title Đảm bảo phục vụ nhanh chóng
+				.content Mang lại sự an tâm phục vụ khách hàng trong từng dịch vụ có sử dụng thiết bị thẩm mỹ công nghệ cao trong và sau thời gian bảo hành. Đó cũng là  lý do quan trọng thúc đẩy KY ANH TECH xây dựng nên qui trình Bảo trì nhằm giúp cho các Thẩm mỹ viện/Spa vận hành trơn tru hơn trong quá trình kinh doanh của mình.
 section.section-timerepair
 	.container
 		.row
@@ -66,11 +64,11 @@ section.section-why
 								.why-content
 									span.blue Hơn 10 năm 
 									span kinh nghiệm trong ngành
-			.main-button
-				.button-prev
-					em.mdi.mdi-chevron-left
-				.button-next
-					em.mdi.mdi-chevron-right
+			//- .main-button
+			//- 	.button-prev
+			//- 		em.mdi.mdi-chevron-left
+			//- 	.button-next
+			//- 		em.mdi.mdi-chevron-right
 section.section-devices
 	.container
 		.section-title.text-center Mỹ Phẩm
@@ -90,6 +88,53 @@ section.section-devices
 					em.mdi.mdi-chevron-right
 		a(href="").btn.gradient-border XEM tất cả
 			em.mdi.mdi-plus
+section.section-library
+	.container
+		.box-title
+			.section-title Thư viện
+			a(href="") Xem tất cả
+		.swiper-library
+			.swiper-container.gallery-top
+				.swiper-wrapper
+					.swiper-slide
+						.item
+							a(href="")
+								img(src="./img/home/14.png", alt="")
+					.swiper-slide
+						.item
+							a(href="")
+								img(src="./img/home/15.png", alt="")
+					.swiper-slide
+						.item
+							a(href="")
+								img(src="./img/home/14.png", alt="")
+					.swiper-slide
+						.item
+							a(href="")
+								img(src="./img/home/15.png", alt="")
+					.swiper-slide
+						.item
+							a(href="")
+								img(src="./img/home/14.png", alt="")
+					
+			.swiper-container.gallery-thumbs
+				.swiper-wrapper
+					.swiper-slide
+						.img
+							img(src="./img/home/14.png", alt="")
+					.swiper-slide
+						.img
+							img(src="./img/home/15.png", alt="")
+					.swiper-slide
+						.img
+							img(src="./img/home/14.png", alt="")
+					.swiper-slide
+						.img
+							img(src="./img/home/15.png", alt="")
+					.swiper-slide
+						.img
+							img(src="./img/home/14.png", alt="")
+						
 section.section-partner
 	.container
 		.box-title
@@ -108,7 +153,18 @@ section.section-partner
 					img(src="./img/left.png", alt="")
 				.button-next
 					img(src="./img/right.png", alt="")
-
+section.section-rated
+	.container
+		.section-title.text-center đánh giá của khách hàng
+	.swiper-rated
+		.swiper-container
+			.swiper-wrapper
+				-for(i=0;i<3;i++)
+					.swiper-slide
+						.item
+							a(data-fancybox="video" href="./img/home/11.png")
+								img(src="./img/home/11.png", alt="").swiper-lazy.swiper-lazy-loaded
+								.play
 section.section-news
 	.container
 		.section-title.text-center Tin Tức

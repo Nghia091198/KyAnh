@@ -357,10 +357,6 @@ function swiperInit() {
         observer: true,
         loop: true,
         observeParents: true,
-        navigation: {
-            nextEl: ".swiper-why .button-next",
-            prevEl: ".swiper-why .button-prev",
-        },
         breakpoints: {
             460: {
                 spaceBetween: 10,
@@ -425,6 +421,92 @@ function swiperInit() {
             460: {
                 spaceBetween: 10,
                 slidesPerView: 2,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+        },
+    });
+    var slideThumbs = new Swiper(".swiper-library .gallery-thumbs", {
+
+        spaceBetween: 5,
+        loop: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        slidesPerColumn: 1,
+        slidesPerView: 5,
+        direction: 'vertical',
+        // slidesPerGroup: 1,
+        // breakpoints: {
+        //     460: {
+        //         spaceBetween: 10,
+        //         slidesPerView: 1,
+        //         centeredSlides: false,
+        //     },
+        //     768: {
+        //         spaceBetween: 10,
+        //         slidesPerView: 3,
+        //         centeredSlides: false,
+        //     },
+        //     1024: {
+        //         spaceBetween: 30,
+        //         slidesPerView: 3,
+        //         centeredSlides: false,
+        //     },
+        // },
+    });
+    var slideTop = new Swiper(".swiper-library .gallery-top", {
+        // spaceBetween: 0,
+        // speed: 1000,
+        // observer: true,
+        // loop: true,
+        // centeredSlides: true,
+        // observeParents: true,
+        // slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true,
+        loopedSlides: 1,
+        thumbs: {
+            swiper: slideThumbs,
+        },
+        // breakpoints: {
+        //     460: {
+        //         spaceBetween: 10,
+        //         slidesPerView: 1,
+        //         centeredSlides: false,
+        //     },
+        //     768: {
+        //         spaceBetween: 10,
+        //         slidesPerView: 3,
+        //         centeredSlides: false,
+        //     },
+        //     1024: {
+        //         spaceBetween: 30,
+        //         slidesPerView: 3,
+        //         centeredSlides: false,
+        //     },
+        // },
+    });
+    var slideRated = new Swiper(".swiper-rated .swiper-container", {
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        centeredSlides: false,
+        observeParents: true,
+        slidesPerView: 'auto',
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 1,
                 centeredSlides: false,
             },
             768: {
