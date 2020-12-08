@@ -9,10 +9,10 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="ie=edge")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
 		link(rel="stylesheet" href="./css/main.min.css")
 		//- link(rel="stylesheet" href="./css/plugins.min.css")
 		title #{title}
-
 	body(class=bodyClass)
 		block header
 			include ../components/_global/header/header.pug
@@ -41,6 +41,7 @@ html(lang="en")
 			LazyLoad.js([
 				'https://code.jquery.com/jquery-3.5.1.min.js',
 				'./js/plugins.min.js',
-				'./js/main.min.js'
+				'./js/main.min.js',
+				'https://unpkg.com/aos@next/dist/aos.js'
 				], function () {
 			});

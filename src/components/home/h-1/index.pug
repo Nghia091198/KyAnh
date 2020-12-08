@@ -10,7 +10,7 @@ section.section-about
 			.col-lg-6.col-md-12
 				.img
 					img(src="./img/home/2.png", alt="").lazyloaded
-section.section-devices
+section.section-devices(data-aos="fade-up")
 	.container
 		.section-title.text-center Thiết bị thẩm mỹ
 		.swiper-devices
@@ -50,7 +50,7 @@ section.section-timerepair
 						.bg-content
 						.time 60' - 90'
 						.desc đối với khu vực ngoại thành Hồ Chí Minh
-section.section-why
+section.section-why(data-aos="fade-up")
 	.container
 		.section-title.text-center TẠI SAO CHỌN KỲ ANH TECH
 		.swiper-why
@@ -69,7 +69,7 @@ section.section-why
 			//- 		em.mdi.mdi-chevron-left
 			//- 	.button-next
 			//- 		em.mdi.mdi-chevron-right
-section.section-devices
+section.section-devices(data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500")
 	.container
 		.section-title.text-center Mỹ Phẩm
 		.swiper-cosmetic
@@ -93,17 +93,21 @@ section.section-library
 		.box-title
 			.section-title Thư viện
 			a(href="") Xem tất cả
-		.swiper-library
+		.swiper-library(data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000")
 			.swiper-container.gallery-top
 				.swiper-wrapper
 					.swiper-slide
 						.item
 							a(href="")
 								img(src="./img/home/14.png", alt="")
+								.title Mộc Phương Beauty and Clinic
+								.cate Sửa máy trị nám
 					.swiper-slide
 						.item
 							a(href="")
 								img(src="./img/home/15.png", alt="")
+								.title Mộc Phương 
+								.cate Sửa máy 
 					.swiper-slide
 						.item
 							a(href="")
@@ -135,7 +139,7 @@ section.section-library
 						.img
 							img(src="./img/home/14.png", alt="")
 						
-section.section-partner
+section.section-partner(data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine")
 	.container
 		.box-title
 			.section-title Đối Tác
@@ -165,7 +169,7 @@ section.section-rated
 							a(data-fancybox="video" href="./img/home/11.png")
 								img(src="./img/home/11.png", alt="").swiper-lazy.swiper-lazy-loaded
 								.play
-section.section-news
+section.section-news(data-aos="fade-up" data-aos-duration="1500")
 	.container
 		.section-title.text-center Tin Tức
 		.swiper-news

@@ -81,9 +81,16 @@ function mappingMenu() {
     let mainMenu = $("header .header-bottom .primary-menu").mapping({
         mobileWrapper: "header .mobile-wrap",
         mobileMethod: "appendTo",
-        desktopWrapper: "header .header-bottom .primary-menu",
+        desktopWrapper: "header .header-bottom",
         desktopMethod: "appendTo",
         breakpoint: 1200,
+    });
+    let mainNav = $("header .header-about .header-right").mapping({
+        mobileWrapper: "header .mobile-wrap",
+        mobileMethod: "appendTo",
+        desktopWrapper: "header .header-about",
+        desktopMethod: "appendTo",
+        breakpoint: 1024,
     });
     // let mainMenuTop = $("header .top-wrap .menu-list").mapping({
     // 	mobileWrapper: "header .mobile-wrap",
@@ -441,27 +448,33 @@ function swiperInit() {
         loop: false,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        slidesPerColumn: 1,
-        slidesPerView: 5,
-        direction: 'vertical',
         // slidesPerGroup: 1,
-        // breakpoints: {
-        //     460: {
-        //         spaceBetween: 10,
-        //         slidesPerView: 1,
-        //         centeredSlides: false,
-        //     },
-        //     768: {
-        //         spaceBetween: 10,
-        //         slidesPerView: 3,
-        //         centeredSlides: false,
-        //     },
-        //     1024: {
-        //         spaceBetween: 30,
-        //         slidesPerView: 3,
-        //         centeredSlides: false,
-        //     },
-        // },
+        breakpoints: {
+            320: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,
+                loop: true,
+            },
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                centeredSlides: false,
+                slidesPerColumn: 1,
+            },
+            1024: {
+                spaceBetween: 5,
+                slidesPerView: 5,
+                centeredSlides: false,
+                slidesPerColumn: 1,
+                direction: 'vertical',
+            },
+        },
     });
     var slideTop = new Swiper(".swiper-library .gallery-top", {
         // spaceBetween: 0,
@@ -610,4 +623,5 @@ $(document).ready(function() {
     pageBanner();
     scrollToDiv();
     selectDis();
+    AOS.init();
 });

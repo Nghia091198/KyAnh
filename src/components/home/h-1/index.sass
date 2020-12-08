@@ -16,7 +16,7 @@
 	.btn
 		margin-top: 40/16*1rem
 .section-devices
-	padding-top: 60/16*1rem
+	padding-top: 50/16*1rem
 	.swiper-devices,.swiper-cosmetic
 		position: relative
 	.main-button
@@ -242,9 +242,12 @@
 	.swiper-library
 		display: flex
 		justify-content: space-between
+		@media screen and ( max-width: 1023.9px )
+			display: block
 		.gallery-top
 			width: 990px!important
-			height: 620px!important
+			@media screen and ( max-width: 1023.9px )
+				width: 100%!important
 			&.swiper-container
 				margin-right: 0
 				margin-left: 0
@@ -253,12 +256,41 @@
 					width: 980px!important
 					height: 620px!important
 					object-fit: cover
+					@media screen and ( max-width: 1023.9px )
+						width: 100%!important
+						height: 330px!important
+			.title
+				color: white
+				font-size: 20/16*1rem
+				font-weight: 700
+				position: relative
+				padding-left: 25/16*1rem 
+				&:before
+					content: ""
+					position: absolute
+					width: 15px
+					height: 1px
+					background-color: white
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+			.cate
+				color: white
+				font-size: 1rem
+				font-weight: 300
+				padding-left: 25/16*1rem
 		.gallery-thumbs
 			&.swiper-container
 				margin-left: 0
 				margin-right: 0
 			.swiper-wrapper
-				padding-left: 20px
+				padding-left: 21px
+				@media screen and ( max-width: 1024px )
+					padding-left: 0
+					margin-top: 20px
+				@media screen and ( max-width: 460px )
+					.img
+						text-align: center
 				.swiper-slide
 					height: 120px!important
 					cursor: pointer
@@ -283,6 +315,9 @@
 							top: 0
 							height: 100%
 							background-color: #54cbf6
+							@media screen and ( max-width: 1024px )
+								display: none
+							
 .section-partner
 	background-color: #54cbf6
 	padding: 60/16*1rem 0
@@ -312,7 +347,7 @@
 			.button-next
 				right: -50px
 .section-rated
-	padding-top: 70/16*1rem
+	padding-top: 40/16*1rem
 	background-color: #f4f7fa
 	.section-title
 		margin-bottom: 30/16*1rem
@@ -345,7 +380,7 @@
 							border-radius: 50%
 							background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 .section-news
-	padding: 60/16*1rem 0 120/16*1rem
+	padding: 50/16*1rem 0 120/16*1rem
 	background-color: #f4f7fa
 	.section-title
 		margin-bottom: 30/16*1rem
@@ -373,9 +408,12 @@
 			position: relative
 			.img
 				height: 260px
+				overflow: hidden
 				img
 					width: 100%
 					height: 100%
+					transform: scale(1.1)
+					transition: .45s all ease-in-out
 			.wrap-content
 				padding: 25/16*1rem 30/16*1rem 35/16*1rem
 				*
@@ -414,6 +452,9 @@
 						display: block
 				&::before
 					display: block
+				img
+					transform: scale(1)
+					transition: .45s all ease-in-out
 .section-registration
 	background-color: #003399
 	height: auto
