@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Thiết Bị'
+	- var bodyClass = 'page-devices'
+
+block main
+	include ../components/banner/pages-banner
+	include ../components/breadcrumb/_breadcrumb
+	include ../components/thiet-bi/index

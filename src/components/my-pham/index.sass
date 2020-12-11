@@ -1,0 +1,29 @@
+.section-comestic.section-devices
+    padding-bottom: 80/16*1rem
+    .item
+        &::before
+            display: none
+        @media screen and ( max-width: 767.9px )
+            .img
+                max-width: 100%
+        .title
+            display: flex
+            justify-content: center
+            align-items: center
+            span
+                @include line(1)
+                font-size: 18/16*1rem
+                font-weight: 500
+                color: black
+        &:hover
+            .title
+                span
+                    color: white
+    .row
+        padding: 0 10px
+    [class*='col-']
+        padding-right: 0
+        padding-left: 0
+    [class*='col-']:nth-child(n+4) .item
+        border-top: unset
+        margin-top: 0

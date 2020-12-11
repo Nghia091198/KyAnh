@@ -1,34 +1,69 @@
 .section-listnews
-    padding-top: 40/16*1rem
+    padding-top: 35/16*1rem
     &.section-news
+        padding-bottom: 80/16*1rem
         background-color: white
         .item
             box-shadow: 0 0 6px rgba(0,0,0,.3)
             height: 100%
             &:hover
                 box-shadow: 0 0 6px rgba(0,0,0,.3)
+                .seemore
+                    span
+                        background: -webkit-linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+                        -webkit-background-clip: text!important
+                        background-clip: text
+                        color: transparent
+                        
             &.lg-item
                 display: flex
                 height: 100%
+                @media screen and ( max-width: 767.9px )
+                    display: block
                 .img
                     width: 50%
                     height: 100%
+                    @media screen and ( max-width: 767.9px )
+                        width: 100%
+                        height: 330px
                     img
                         width: 420px
                         height: 100%
                         object-fit: cover
+                        @media screen and ( max-width: 767.9px )
+                            width: 100%
                 .wrap-content
                     width: 50%
+                    position: relative
+                    @media screen and ( max-width: 767.9px )
+                        width: 100%
                     .title
+                        @include line(2)
                         height: unset
                         margin-bottom: 20px
                     .content
+                        @include line(8)
+                        padding-bottom: 75/16*1rem
                         color: #333333
                         font-size: 18/16*1rem
+                    .seemore
+                        position: absolute
+                        bottom: 25px
+                        width: 80%
+            .wrap-content
+                padding-bottom: 25/16*1rem
+                .seemore
+                    *
+                        color: #333333
+                        font-size: 16px
+                        font-weight: 600
     .section-title
         margin-bottom: 30/16*1rem
-    
-    [class*="col-"]:nth-child(n+3) .item
+    [class*="col-"]:nth-child(n+3)
         margin-top: 30/16*1rem
+    @media screen and ( max-width: 1023.9px )
+        [class*="col-"]:nth-child(n+2)
+            margin-top: 20/16*1rem
+        
 
         
