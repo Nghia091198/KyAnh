@@ -1,0 +1,34 @@
+.section-listnews
+    padding-top: 40/16*1rem
+    &.section-news
+        background-color: white
+        .item
+            box-shadow: 0 0 6px rgba(0,0,0,.3)
+            height: 100%
+            &:hover
+                box-shadow: 0 0 6px rgba(0,0,0,.3)
+            &.lg-item
+                display: flex
+                height: 100%
+                .img
+                    width: 50%
+                    height: 100%
+                    img
+                        width: 420px
+                        height: 100%
+                        object-fit: cover
+                .wrap-content
+                    width: 50%
+                    .title
+                        height: unset
+                        margin-bottom: 20px
+                    .content
+                        color: #333333
+                        font-size: 18/16*1rem
+    .section-title
+        margin-bottom: 30/16*1rem
+    
+    [class*="col-"]:nth-child(n+3) .item
+        margin-top: 30/16*1rem
+
+        
