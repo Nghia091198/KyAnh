@@ -1,0 +1,42 @@
+.block_image-gallery
+    .tab-link
+        display: flex
+        justify-content: center
+        list-style: none
+        padding: 0
+        padding-top: r(25px)
+        padding-bottom: r(40px)
+        li
+            margin: 0 r(15px)
+            .link
+                width: r(180px)
+                height: r(50px)
+                border-radius: 50px
+                border: 1px solid #3399ff
+                display: flex
+                justify-content: center
+                align-items: center
+                text-transform: uppercase
+            &.active,
+            &:hover
+                a
+                    border: 1px solid transparent
+                    background-image: linear-gradient(to bottom, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+                    color: #ffffff
+    .item-img
+        margin-bottom: 30px
+        .img
+            +img-ratio(245/390)
+            &::before
+                content: ''
+                position: absolute
+                bottom: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(0,0,0,0.4)
+                z-index: 1
+                pointer-events: none
+        &.big
+            .img
+                +img-ratio(520/810)
+
