@@ -1,6 +1,6 @@
 function height(el) {
     var height = 0;
-    $(el).each(function() {
+    $(el).each(function () {
         var thisHeight = $(this).height();
         if (thisHeight > height) {
             height = thisHeight;
@@ -12,7 +12,7 @@ function height(el) {
 }
 
 let header = {
-    scrollActive: function() {
+    scrollActive: function () {
         let height = $("header").height();
         if ($(window).scrollTop() > height) {
             $("header").addClass("active");
@@ -32,7 +32,7 @@ function scrollNav() {
 }
 
 function setBackgroundElement() {
-    $("[setBackground]").each(function() {
+    $("[setBackground]").each(function () {
         var background = $(this).attr("setBackground");
         var bgMobile = $(this).attr("setBackgroundMobile");
         var breakpoint = $(this).attr("breakpoint");
@@ -58,7 +58,7 @@ function setBackgroundElement() {
             });
         }
     });
-    $("[setBackgroundRepeat]").each(function() {
+    $("[setBackgroundRepeat]").each(function () {
         var background = $(this).attr("setBackgroundRepeat");
         $(this).css({
             "background-image": "url(" + background + ")",
@@ -112,7 +112,7 @@ function menuMobile() {
     let toggle = $(".toggle-menu");
     let menuMobile = $(".mobile-wrap");
     let primaryMenu = $(".primary-menu");
-    toggle.on("click", function() {
+    toggle.on("click", function () {
         $(this).toggleClass("active");
         menuMobile.toggleClass("active");
         primaryMenu.toggleClass("active");
@@ -122,12 +122,12 @@ function menuMobile() {
 function search() {
     let searchToggle = $(".search");
     let searchBox = $("#search");
-    searchToggle.on("click", function() {
+    searchToggle.on("click", function () {
         searchBox.toggleClass("active");
     });
 
     let btnClose = $(".btn-close");
-    btnClose.on("click", function() {
+    btnClose.on("click", function () {
         searchBox.removeClass("active");
     });
 }
@@ -163,37 +163,37 @@ function swiperInit() {
 
     var home3Thumbs = new Swiper(
         ".sabeco-home-3 .main-slide-thumbs .swiper-container", {
-            slidesPerView: 3,
-            speed: 300,
-            slidesPerColumnFill: "row",
-            freeMode: true,
-            loopedSlides: 4,
-            spaceBetween: 10,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            breakpoints: {
-                768: {
-                    spaceBetween: 30,
-                },
+        slidesPerView: 3,
+        speed: 300,
+        slidesPerColumnFill: "row",
+        freeMode: true,
+        loopedSlides: 4,
+        spaceBetween: 10,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
             },
-        }
+        },
+    }
     );
 
     var home3Top = new Swiper(
         ".sabeco-home-3 .main-slide-top .swiper-container", {
-            slidesPerView: 1,
-            speed: 300,
-            slidesPerColumnFill: "row",
-            freeMode: true,
-            loopedSlides: 4,
-            thumbs: {
-                swiper: home3Thumbs,
-            },
-            navigation: {
-                nextEl: ".sabeco-home-3 .button-next",
-                prevEl: ".sabeco-home-3 .button-prev",
-            },
-        }
+        slidesPerView: 1,
+        speed: 300,
+        slidesPerColumnFill: "row",
+        freeMode: true,
+        loopedSlides: 4,
+        thumbs: {
+            swiper: home3Thumbs,
+        },
+        navigation: {
+            nextEl: ".sabeco-home-3 .button-next",
+            prevEl: ".sabeco-home-3 .button-prev",
+        },
+    }
     );
 
     var home5Slide = new Swiper(".sabeco-home-5 .swiper-container", {
@@ -252,23 +252,23 @@ function swiperInit() {
 
     var newsDetailRelated = new Swiper(
         ".sabeco-newsroom-detail .news-related .swiper-container", {
-            slidesPerView: 1,
-            speed: 300,
-            slidesPerColumnFill: "row",
-            spaceBetween: 30,
-            breakpoints: {
-                576: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
+        slidesPerView: 1,
+        speed: 300,
+        slidesPerColumnFill: "row",
+        spaceBetween: 30,
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
             },
-            navigation: {
-                nextEl: ".sabeco-newsroom-detail .news-related .button-next",
-                prevEl: ".sabeco-newsroom-detail .news-related .button-prev",
+            768: {
+                slidesPerView: 3,
             },
-        }
+        },
+        navigation: {
+            nextEl: ".sabeco-newsroom-detail .news-related .button-next",
+            prevEl: ".sabeco-newsroom-detail .news-related .button-prev",
+        },
+    }
     );
     var history_thum = new Swiper(".history-thumbs", {
         freeMode: true,
@@ -534,6 +534,34 @@ function swiperInit() {
             },
         },
     });
+    var galleryThumbs = new Swiper('.cosmetic-swiper .gallery-thumbs', {
+        spaceBetween: 5,
+        loop: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            300: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+                slidesPerColumn: 1,
+                direction: 'vertical',
+            },
+            1024: {
+                slidesPerView: 5,
+                slidesPerColumn: 1,
+                direction: 'vertical',
+            },
+        },
+    });
+    var galleryTop = new Swiper('.cosmetic-swiper .gallery-top', {
+        loop: true,
+        loopedSlides: 1,
+        thumbs: {
+            swiper: galleryThumbs
+        },
+    });
 }
 
 function pageBanner() {
@@ -551,18 +579,18 @@ function pageBanner() {
 }
 
 function scrollToDiv() {
-    $(".pages-banner-arrow").on("click", function(event) {
+    $(".pages-banner-arrow").on("click", function (event) {
         var hash = this.hash;
         $("html,body").animate({
-                scrollTop: $(".pages-banner").outerHeight(),
-            },
+            scrollTop: $(".pages-banner").outerHeight(),
+        },
             "slow"
         );
     });
 }
 
 function Acordition() {
-    $(".faq-list .faq-item").click(function(e) {
+    $(".faq-list .faq-item").click(function (e) {
         var t = $(this).closest(".faq-item").find(".content");
         $(this).closest(".faq-list").find(".content").not(t).slideUp();
         $(this).hasClass("active") ?
@@ -576,12 +604,12 @@ function Acordition() {
             e.preventDefault();
     });
 }
-$(document).on("scroll", function() {
+$(document).on("scroll", function () {
     header.scrollActive();
 });
 
 const selectDis = () => {
-    $(".select-item .title-select").click(function() {
+    $(".select-item .title-select").click(function () {
         var t = $(this).closest(".select-item").find(".content");
         $(this).closest(".wrap-select").find(".content").not(this).slideUp();
         if ($(this).hasClass("active")) {
@@ -611,7 +639,7 @@ const selectDis = () => {
 // 			e.preventDefault();
 // 	});
 // };
-$(document).ready(function() {
+$(document).ready(function () {
     setBackgroundElement();
     // header
     mappingMenu();

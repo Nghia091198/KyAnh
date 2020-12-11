@@ -1,0 +1,97 @@
+.block_cosmetic-detail
+    .cosmetic-swiper
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 576px )
+            display: flex
+            flex-direction: column
+        .gallery-top
+            position: relative
+            width: 600px
+            @media screen and ( max-width: 576px )
+                width: 100%
+            .swiper-slide
+                width: 100%
+                height: 510px
+                border: 1px solid #e0e0e0
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 10%
+                @media screen and ( max-width: 1280px )
+                    height: 400px
+                @media screen and ( max-width: 576px )
+                    height: 300px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            .nav-prev,.nav-next
+                position: absolute
+                top: 45%
+                display: flex
+                z-index: 5
+                em
+                    cursor: pointer
+                    color: #707070
+                    font-size: 30px
+                    color: #999999
+            .nav-next
+                right: 0
+            .nav-prev
+                left: 0
+        .gallery-thumbs
+            width: 90px
+            margin-right: 15px
+            @media screen and ( max-width: 576px )
+                width: 100%
+                order: 2
+                margin-top: 20px
+            .swiper-wrapper
+                display: flex
+                justify-content: space-between
+                .swiper-slide
+                    height: 75px !important
+                    margin-bottom: 0 !important
+                    cursor: pointer
+                    border: 1px solid #e0e0e0
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    padding: 10%
+                    @media screen and ( max-width: 1280px )
+                        height: 60px !important
+                    @media screen and ( max-width: 1280px )
+                        padding: 10px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .swiper-slide-thumb-active
+                    border: 1px solid #0c59b4
+    .wraper-cosmetic
+        padding-bottom: r(10px)
+        border-bottom: 1px solid #e0e0e0
+        .name-cosmetic
+            h1
+                font-size: r(24px)
+                color: #333333
+        .price-box
+            display: flex
+            align-items: center
+            .price
+                font-size: r(24px)
+                color: #0c59b4
+                font-weight: 700
+                margin-right: r(20px)
+            .cost
+                font-size: r(16px)
+                color: #999999
+                text-decoration: line-through
+        .content-box
+            display: flex
+            padding-top: r(10px)
+            .title
+                color: #666666
+                font-weight: 700
+                width: r(130px)
