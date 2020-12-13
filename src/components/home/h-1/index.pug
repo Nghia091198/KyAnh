@@ -3,16 +3,16 @@ section.section-about
 		.row
 			.col-lg-6.col-md-12
 				.bg-about
-					.section-title về chúng tôi
+					.section-title.text-left về chúng tôi
 					.content Công ty chuyên phân phối các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,…… (các dòng máy phong phú đa dạng phù hợp nhu cầu của từng khách hàng). Phân phối và thay thế linh kiện, phụ kiện máy chính hãng.Quy trình làm việc nhanh chóng giúp giảm thiểu tổn thất cho khách hàng. Tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành.
 					a(href="").btn.gradient-border xem thêm
 						em.mdi.mdi-plus
 			.col-lg-6.col-md-12
 				.img
 					img(src="./img/home/2.png", alt="").lazyloaded
-section.section-devices
+section.section-devices(data-aos="fade-up")
 	.container
-		.section-title.text-center Thiết bị thẩm mỹ
+		.section-title Thiết bị thẩm mỹ
 		.swiper-devices
 			.swiper-container
 				.swiper-wrapper
@@ -50,9 +50,9 @@ section.section-timerepair
 						.bg-content
 						.time 60' - 90'
 						.desc đối với khu vực ngoại thành Hồ Chí Minh
-section.section-why
+section.section-why(data-aos="fade-up")
 	.container
-		.section-title.text-center TẠI SAO CHỌN KỲ ANH TECH
+		.section-title TẠI SAO CHỌN KỲ ANH TECH
 		.swiper-why
 			.swiper-container
 				.swiper-wrapper
@@ -64,9 +64,18 @@ section.section-why
 								.why-content
 									span.blue Hơn 10 năm 
 									span kinh nghiệm trong ngành
+<<<<<<< HEAD
 section.section-devices
+=======
+			//- .main-button
+			//- 	.button-prev
+			//- 		em.mdi.mdi-chevron-left
+			//- 	.button-next
+			//- 		em.mdi.mdi-chevron-right
+section.section-devices(data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500")
+>>>>>>> 825d1be20adb5f895cd78a959b9272fd19bd2c35
 	.container
-		.section-title.text-center Mỹ Phẩm
+		.section-title Mỹ Phẩm
 		.swiper-cosmetic
 			.swiper-container
 				.swiper-wrapper
@@ -88,17 +97,21 @@ section.section-library
 		.box-title
 			.section-title Thư viện
 			a(href="") Xem tất cả
-		.swiper-library
+		.swiper-library(data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000")
 			.swiper-container.gallery-top
 				.swiper-wrapper
 					.swiper-slide
 						.item
 							a(href="")
 								img(src="./img/home/14.png", alt="")
+								.title Mộc Phương Beauty and Clinic
+								.cate Sửa máy trị nám
 					.swiper-slide
 						.item
 							a(href="")
 								img(src="./img/home/15.png", alt="")
+								.title Mộc Phương 
+								.cate Sửa máy 
 					.swiper-slide
 						.item
 							a(href="")
@@ -130,7 +143,7 @@ section.section-library
 						.img
 							img(src="./img/home/14.png", alt="")
 						
-section.section-partner
+section.section-partner(data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine")
 	.container
 		.box-title
 			.section-title Đối Tác
@@ -150,7 +163,7 @@ section.section-partner
 					img(src="./img/right.png", alt="")
 section.section-rated
 	.container
-		.section-title.text-center đánh giá của khách hàng
+		.section-title đánh giá của khách hàng
 	.swiper-rated
 		.swiper-container
 			.swiper-wrapper
@@ -160,9 +173,9 @@ section.section-rated
 							a(data-fancybox="video" href="./img/home/11.png")
 								img(src="./img/home/11.png", alt="").swiper-lazy.swiper-lazy-loaded
 								.play
-section.section-news
+section.section-news(data-aos="fade-up" data-aos-duration="1500")
 	.container
-		.section-title.text-center Tin Tức
+		.section-title Tin Tức
 		.swiper-news
 			.swiper-container
 				.swiper-wrapper

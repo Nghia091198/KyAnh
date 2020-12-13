@@ -1,23 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&display=swap')
 html
-	font-family: 'Source Sans Pro', sans-serif
-	line-height: 1.5
+	font-family: 'K2D', sans-serif
+	line-height: 1.2
 	-webkit-text-size-adjust: 100%
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 	
 body
-	font-family: 'Source Sans Pro', sans-serif
+	font-family: 'K2D', sans-serif
 	font-weight: 400
-	line-height: 1.5
+	line-height: 1.2
 	background-color: $body
 	color: $gray
 	margin-top: 0
 	margin-bottom: 0
 body, html 
-	font-size: 16px
+	font-size: 13px
+	@media(min-width: 768px)
+		font-size: 14px
 	@media(min-width: 1024px)
-		font-size: 18px
+		font-size: 15px
 	@media(min-width: 1280px)
-		font-size: 20px
+		font-size: 16px
 
 *
 	box-sizing: border-box
@@ -109,7 +112,7 @@ a:not([href]):not([tabindex]):focus
 	outline: 0
 
 pre, code, kbd, samp
-	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+	// font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 	font-size: 1em
 
 pre

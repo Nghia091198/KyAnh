@@ -1,0 +1,61 @@
+.section-pagedevice.section-devices
+    padding-bottom: 80/16*1rem
+    .option
+        width: 100%
+        .option-header
+            text-transform: uppercase
+            height: 50px
+            display: flex
+            align-items: center
+            color: white
+            background-color: #1974d2
+            padding: 20px
+            font-size: 20px
+        .option-body
+            list-style: none
+            padding-left: 0
+            padding: 20px
+            border: 1px solid #cccccc
+            li
+                margin-bottom: 20/16*1rem
+                &:last-child
+                    margin-bottom: 0
+                a
+                    font-size: 18px
+                    color: #333333
+                    font-weight: 500
+                    display: inline-block
+                    &:hover
+                        color: #0066cc
+    .section-title
+        margin-bottom: 5px
+        @media screen and ( max-width: 1023.9px )
+            text-align: center
+            margin: 30/16*1rem 0
+    .no-gutters
+        margin-right: 0
+        margin-left: 0
+        > .col,
+        > [class*="col-"]
+            padding-right: 0
+            padding-left: 0
+        > [class*="col-"]:nth-child(n+4) .item
+            border-top: 0
+    .item
+        .img
+            padding: 10px 0
+            height: 245px
+            @media screen and ( max-width: 1023.9px )
+               max-width: 100% 
+            img
+                height: 100%
+                object-fit: cover
+        .title
+            padding: 20px
+            overflow: hidden
+        &::before
+            width: 150px
+            height: 150px
+            
+                        
+        

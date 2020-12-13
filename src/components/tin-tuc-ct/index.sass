@@ -1,0 +1,114 @@
+.section-page-newsdetail
+    padding-top: 50/16*1rem
+    .mx-auto
+        margin-right: auto
+        margin-left: auto
+    .wrap-header
+        .section-title
+            color: black
+            text-transform: none
+            text-align: left
+            margin-bottom: 15px
+        .wrap-bottom
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 10px
+            border-bottom: 1px solid #d5d5d5
+            margin-bottom: 30/16*1rem
+            time
+                font-size: 14px
+                color: #666666
+                letter-spacing: 1.2px
+            .wrap-social
+                display: flex
+                a
+                    position: relative
+                    display: inline-block
+                    width: 30px
+                    height: 30px
+                    border-radius: 100%
+                    background-color: #bbbbbb
+                    transition: .3s all ease-in-out
+                    &:first-child
+                        margin-right: 10px
+                    em
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        &::before
+                            content: ""
+                            font-family: 'remixicon'
+                            font-style: initial
+                            color: white
+                            font-size: 18px
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                        &.facebook
+                            &::before
+                                content: "\ecbc"
+                        &.twitter
+                            &::before
+                                content: "\f23a"  
+                    &:hover
+                        background-color: #33ccff
+                        transition: .3s all ease-in-out
+    .wrap-content
+        *
+            margin-bottom: 30/16*1rem
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+            font-size: 20px
+            display: flex
+            align-items: center
+            font-weight: bold
+            position: relative
+            padding-left: 5px
+            border-left: 3px solid #3aaff9
+            line-height: 1
+        img
+            width: 100%
+            max-height: 640px
+            object-fit: cover
+            margin-left: auto
+            margin-right: auto
+.section-newsrelated.section-news
+    background-color: white
+    padding: 30/16*1rem 0 60/16*1rem
+    .section-title
+        border-top: 1px solid #d5d5d5
+        padding-top: 45/16*1rem
+    .item
+        box-shadow: 0 0 6px rgba(0,0,0,.3)
+        margin: 10px 5px
+    .swiper-newsrelated
+        position: relative
+        .main-button
+            @media screen and ( max-width: 1250px )
+                display: none
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            [class*='button-']
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                font-size: 60px  
+            .button-prev
+                left: -70px
+                color: #666666
+                &:hover
+                    color: #3ab1f9
+            .button-next
+                right: -70px
+                color: #666666
+                &:hover
+                    color: #3ab1f9

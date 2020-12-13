@@ -1,0 +1,47 @@
+section.section-recruitment
+    .container
+        .section-title tuyển dụng
+        .row
+            .col-lg-6.col-md-12
+                a(href="").wrap-img
+                    .img
+                        img(src="./img/tuyen-dung/1.png", alt="")
+            .col-lg-6.col-md-12
+                .wrap-content
+                    .title Môi trường làm việc
+                    .content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                    .content Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+section.position-recruitment
+    .container
+        table
+            tr
+                td STT
+                td Vị trí ứng tuyển
+                td Số lượng
+                td Khu vực
+                td Thời hạn
+            -for(i=0;i<10;i++)
+                tr
+                    td 01
+                    td 
+                        a(href="") Nhân viên kinh doanh 
+                    td 01
+                    td TP.HCM
+                    td 15.07.2020
+        .row.list-mobile
+            -for(i=0;i<6;i++)
+                .col-md-6
+                    .list-item
+                        .title
+                            a(href="") Nhân viên kinh doanh 
+                        p Số lượng: 01
+                        p Khu vực: TP.HCM
+                        P Thời hạn: 15.07.2020
+                        a(href="").btn.btn-primary Xem chi tiết
+        ul.pagination
+            li
+                a(href="").active 1
+            li
+                a(href="") 2
+            li
+                a(href="") 3

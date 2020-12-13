@@ -1,5 +1,12 @@
+@mixin  line($line)
+	overflow: hidden
+	text-overflow: ellipsis
+	display: -webkit-box
+	-webkit-line-clamp: $line
+	-webkit-box-orient: vertical
+	
 @function r($size)
-	@return ($size/20px)*1rem
+	@return ($size/16px)*1rem
 
 @function pow($base, $exponent)
 	$result: 1
