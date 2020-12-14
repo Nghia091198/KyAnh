@@ -34,6 +34,8 @@ footer
 	.footer-bottom
 		background-color: #005ca8
 		margin-top: 100/16*1rem
+		@media screen and ( max-width: 1023.9px )
+			margin-top: 50/16*1rem
 		.wraptext
 			display: flex
 			align-items: center
@@ -41,6 +43,7 @@ footer
 			height: 70px
 			@media screen and ( max-width: 767.9px )
 				flex-direction: column-reverse
+				justify-content: center
 			*
 				color: white
 				font-weight: 300
@@ -51,6 +54,9 @@ footer
 				align-items: center
 				@media screen and ( max-width: 767.9px )
 					margin-bottom: 10px
+				@media screen and ( max-width: 362px )
+					flex-wrap: wrap
+					justify-content: center
 				a
 					display: flex
 					align-items: center
@@ -68,3 +74,9 @@ footer
 					&:last-child
 						&::before
 							display: none
+					@media screen and ( max-width: 362px )
+						&:nth-child(n+2)
+							&::before
+								display: none
+						&:nth-child(n+3)
+							margin-top: 10px
