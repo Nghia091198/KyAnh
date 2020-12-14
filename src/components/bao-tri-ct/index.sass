@@ -1,0 +1,181 @@
+.section-maintenance-1
+    padding: r(50px) 0 r(40px)
+    .section-title
+        margin-bottom: r(30px)
+    .img
+        width: 100%
+        height: 385px
+        position: relative
+        .fancy
+            position: relative
+            display: inline-block
+            height: 100%
+            &::before
+                position: absolute
+                content: ""
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(0,0,0,.4) 
+        .play
+            position: absolute
+            width: 75px
+            height: 75px
+            border: 5px solid white
+            border-radius: 50%
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            opacity: 1
+            transition: .2s all ease-in-out
+            &:before
+                content: "\f00b"
+                font-family: "remixicon"
+                font-size: 60px
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                color: white
+                position: absolute
+        &:hover
+            .play
+                border: unset
+                transition: .2s all ease-in-out
+                background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+        img 
+            height: 100%
+            object-fit: cover
+    .wrap-content
+        height: 280px
+        overflow-y: scroll
+        padding: 0 r(30px) r(30px)
+        margin-top: r(30px)
+        *
+            line-height: 1.5
+            color: #666666
+            font-size: 16px
+        p:first-child
+            margin-bottom: 30px
+    ::-webkit-scrollbar-thumb
+        background-color: #0c59b4
+    ::-webkit-scrollbar
+        width: 5px
+    ::-webkit-scrollbar-track
+        background-color: #eaeaea
+    .image-gray
+        height: 385px
+        display: flex
+        align-items: center
+        justify-content: center
+
+.section-maintenance-2
+    .section-title
+        margin-bottom: r(30px)
+    @media screen and ( max-width: 1365px )
+        .wrap-table
+            overflow-x: auto
+            table
+                overflow-x: auto
+        ::-webkit-scrollbar-thumb
+            background-color: #0c59b4
+        ::-webkit-scrollbar
+            height: 3px
+        ::-webkit-scrollbar-track
+            background-color: #eaeaea
+    table
+        width: 1020px 
+        border-collapse: collapse
+        border-spacing: 0
+        tr,td
+            border: 1px solid #e0e0e0
+            text-align: center
+            height: 40px
+            font-size: 16px
+            color: #333333
+            font-weight: 700
+        tr
+            &:first-child td,
+            &:nth-child(2) td
+                color: #0066cc
+                font-size: 18px
+                font-weight: bold
+                background-color: #f5f5f5
+    .wrap-include
+        margin: r(30px) 0 r(10px)
+        .title
+            color: #0066cc
+            font-size: r(18px)
+            margin-bottom: 10px
+            font-weight: 700
+        ul
+            padding-left: 0
+            list-style: none
+            *
+                font-size: 16px
+                color: #666666
+            li
+                position: relative
+                padding-left: 20px
+                display: flex
+                align-items: center
+                margin-bottom: 7px  
+                &::before
+                    position: absolute
+                    content: "\ea54"
+                    font-family: "remixicon"
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: -5px
+                    font-size: 20px
+        .content
+            margin-top: r(25px)
+            *
+                color: #333333
+                font-weight: 700
+                line-height: 1.5
+            a
+                color: #0066cc
+                &:hover
+                    text-decoration: underline
+.section-steps
+    padding-top: r(30px)
+    .section-title
+        margin-bottom: r(30px)
+    .img
+        margin: 0 auto
+.section-benefit
+    background: url("../img/bao-tri-ct/bg.png") no-repeat center center
+    height: 370px
+    position: relative
+    margin-top: r(50px)
+    &::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(#476b8c, 0.8)
+.section-maintenance-3.section-repair
+    .flex-nowrap
+        flex-wrap: nowrap
+    [class*='col-']:first-child
+        padding-right: 0 
+    [class*='col-']:last-child
+        padding-left: 0
+    .img
+        a
+            display: block
+            width: 100%
+            height: 445px
+    .repair-content
+        margin-left: -50px
+        border-radius: 15px
+        box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.05)
+        background-image: linear-gradient(to top, #1379d6 0%, #1379d6 2%, #00adef 100%), linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+
+         
+
+
+

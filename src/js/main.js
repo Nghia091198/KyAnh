@@ -523,7 +523,7 @@ const selectDis = () => {
 };
 
 $(document).ready(function() {
-    AOS.init();
+    // AOS.init();
     // setBackgroundElement();
     changeNav();
     mappingMenu();
