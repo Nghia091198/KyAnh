@@ -14,6 +14,14 @@ header
 	margin-left: auto
 	margin-right: auto
 	transition: .4s all ease-in-out
+	.language
+		&:hover
+			*
+				color: #36c!important
+		.dropdown
+			background-color: rgb(102, 204, 255)!important
+			a
+				color: white!important
 	&.active
 		background-color: white
 		transition: .4s all ease-in-out
@@ -28,7 +36,8 @@ header
 			.header-bottom
 				padding-left: 1rem
 			.header-right
-				margin-left: auto
+				@media screen and ( min-width: 1200.1px )
+					margin-left: auto
 			.primary-menu
 				.title
 					a
@@ -37,6 +46,8 @@ header
 					&:hover
 						a
 							color: #3366cc
+				&.active
+					top: 69px
 			.language
 				*
 					color: #333333
@@ -257,13 +268,22 @@ header
 		left: 0
 		transition: .4s all ease-in-out
 	.form-group
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
 		em
 			margin-left: -30px
 			color: black
+			font-size: 22px
 		input
 			border-radius: 25px
 			border: unset
 			padding-left: 15px
+			height: 40px
+			width: 30%
+			@media screen and ( max-width: 1024px )
+				width: 290px
 .header-top
 	display: flex
 	padding-top: 10px

@@ -13,8 +13,11 @@ function changeNav() {
                 let mainMenu2 = $("header .header-2 .header-right").mapping({
                     mobileWrapper: "header .mobile-wrap .primary-menu",
                     mobileMethod: "appendTo",
-                    desktopWrapper: "header .header-bottom",
-                    desktopMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+                let mainMenu4 = $("header .mobile-wrap").mapping({
+                    mobileWrapper: "header .header-2",
+                    mobileMethod: "appendTo",
                     breakpoint: 1200,
                 });
             } else {
@@ -27,8 +30,11 @@ function changeNav() {
                 let mainMenu3 = $("header .header-1 .header-right").mapping({
                     mobileWrapper: "header .mobile-wrap .primary-menu",
                     mobileMethod: "appendTo",
-                    desktopWrapper: "header .header-bottom",
-                    desktopMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+                let mainMenu4 = $("header .mobile-wrap").mapping({
+                    mobileWrapper: "header .container",
+                    mobileMethod: "appendTo",
                     breakpoint: 1200,
                 });
             };
@@ -36,9 +42,21 @@ function changeNav() {
     } else {
         $("header .header-1").css({ "display": "none" });
         $("header").addClass("scroll-nav");
+        $(".toggle-menu span").css({ "background-color": "#036" });
         $(".header-bottom").appendTo(".header-2");
         $(".header-right").appendTo(".header-2");
-        $(".header-right").appendTo(".header-2");
+        let mainMenu7 = $("header .header-right").mapping({
+            mobileWrapper: "header .primary-menu",
+            mobileMethod: "appendTo",
+            desktopWrapper: ".header-2",
+            desktopMethod: "appendTo",
+            breakpoint: 1200,
+        });   
+        let mainMenu8 = $("header .mobile-wrap").mapping({
+            mobileWrapper: "header .header-2",
+            mobileMethod: "appendTo",
+            breakpoint: 1200,
+        });   
     }
 
 }
@@ -77,26 +95,23 @@ function menuMobile() {
     });
 }
 
-function check() {
-    // var check = $("header .header-1").css({ "display": "none" });
-    // if (check) {
-    //     console.log("ok");
-    // }
-    let test = $("header").height();
-    console.log(test);
-}
-
 function search() {
     let searchToggle = $(".search");
     let searchBox = $("#search");
+    let root = $("html");
     searchToggle.on("click", function() {
         searchBox.toggleClass("active");
+        if (searchBox.hasClass("active")) {
+            console.log("ok");
+            root.css({ "overflow": "hidden" });
+        }
     });
-
     let btnClose = $(".btn-close");
     btnClose.on("click", function() {
         searchBox.removeClass("active");
+        root.css({ "overflow": "visible" });
     });
+    
 }
 
 function swiperInit() {
@@ -389,7 +404,6 @@ function swiperInit() {
         loop: true,
         centeredSlides: false,
         observeParents: true,
-        slidesPerView: 'auto',
         breakpoints: {
             460: {
                 spaceBetween: 10,
@@ -398,11 +412,11 @@ function swiperInit() {
             },
             768: {
                 spaceBetween: 10,
-                slidesPerView: 3,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
             1024: {
-                spaceBetween: 30,
+                spaceBetween: 20,
                 slidesPerView: 3,
                 centeredSlides: false,
             },
@@ -535,7 +549,6 @@ $(document).ready(function() {
     changeNav();
     mappingMenu();
     menuMobile();
-    check();
     search();
     Acordition();
     swiperInit();
@@ -543,5 +556,5 @@ $(document).ready(function() {
     scrollToDiv();
     selectDis();
     tabActive();
-    AOS.init();
+    // AOS.init();
 });
