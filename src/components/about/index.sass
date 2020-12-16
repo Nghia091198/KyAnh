@@ -1,0 +1,219 @@
+.block_about
+    .section-title
+        margin-bottom: r(25px)
+    .content_about-us
+        p
+            margin-bottom: r(25px)
+    .item-img
+        position: relative
+        margin-bottom: 30px
+        .img
+            +img-ratio(370/600)
+            &::before
+                content: ''
+                position: absolute
+                bottom: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(0,0,0,0.4)
+                z-index: 1
+                pointer-events: none
+        .play
+            position: absolute
+            width: r(75px)
+            height: r(75px)
+            border-radius: 50%
+            top: 50%
+            left: 50%
+            z-index: 5
+            transform: translate(-50%,-50%)
+            &:before
+                content: "\f00b"
+                font-family: "remixicon"
+                font-weight: 300
+                font-size: r(40px)
+                border: 5px solid #ffffff
+                border-radius: 50%
+                width: r(60px)
+                height: r(60px)
+                display: flex
+                align-items: center
+                justify-content: center
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                color: #ffffff
+                position: absolute
+        &:hover
+            .play
+                background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+.block_about-2
+    padding: r(50px) 0
+    .item-img
+        position: relative
+        margin-bottom: 30px
+        .img
+            +img-ratio(330/600)
+            &::before
+                content: ''
+                position: absolute
+                bottom: 0
+                width: 100%
+                height: 40%
+                background: linear-gradient(180deg,rgba(0,0,0,.01),rgba(0,0,0,.5))
+                z-index: 1
+                pointer-events: none
+        .content
+            position: absolute
+            left: 3%
+            bottom: 5%
+            width: 60%
+            font-size: r(16px)
+            color: #fff
+            z-index: 5
+    .swiper-about
+        position: relative
+        .item-img
+            margin-bottom: 0
+        .button-arrow
+            @media screen and ( max-width: 1024.1px )
+                display: none
+            position: absolute
+            top: 0
+            height: 100%
+            width: 100%
+            .button-prev,
+            .button-next
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                z-index: 5
+                font-size: r(48px)
+                color: #1974d2
+            .button-prev
+                left: -60px
+            .button-next
+                right: -60px
+        .swiper-button-disabled
+            color: #cccccc !important
+.section-assess
+    padding: r(50px)
+    padding-bottom: r(100px)
+    .swiper-assess
+        margin: 0 auto
+        width: 88%
+        position: relative
+        margin-top: r(30px)
+        @media screen and ( max-width: 1023.98px )
+            width: 100%
+        .item
+            display: flex
+            justify-content: flex-end
+            position: relative
+            @media screen and ( max-width: 1023.98px )
+                flex-direction: column
+            .content
+                width: 48.8%
+                height: r(284px)
+                top: r(20px)
+                left: 1%
+                background-color: #ffffff
+                position: absolute
+                z-index: 5
+                box-shadow: 5px 5px 10px 0 rgba(0,0,0,.2)
+                padding: r(20px)
+                @media screen and ( max-width: 1023.98px )
+                    width: 100%
+                    position: static
+                    order: 2
+                    box-shadow: unset
+                    border: 1px solid #d5d5d5
+                    height: unset
+                .name
+                    font-size: r(18px)
+                    color: #1974d2
+                    font-weight: 700
+                .position
+                    margin-top: r(10px)
+                    margin-bottom: r(20px)
+                .text
+                    padding: 0 r(20px)
+                    position: relative
+                    +line(8)
+                    &::before
+                        content: ' " ' 
+                        position: absolute
+                        top: r(-5px)
+                        left: 0
+                        font-size: r(36px)
+                        color: #1974d2
+            .item-img
+                position: relative
+                width: 52%
+                margin-bottom: 30px
+                @media screen and ( max-width: 1023.98px )
+                    width: 100%
+                    margin: 0
+                .img
+                    height: r(284px)
+                    @media screen and ( max-width: 1023.98px )
+                        height: unset
+                        +img-ratio(285/560)
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                    &::before
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        width: 100%
+                        height: 40%
+                        background: linear-gradient(180deg,rgba(0,0,0,.01),rgba(0,0,0,.5))
+                        z-index: 1
+                        pointer-events: none
+                .play
+                    position: absolute
+                    width: r(75px)
+                    height: r(75px)
+                    border-radius: 50%
+                    top: 50%
+                    left: 50%
+                    z-index: 5
+                    transform: translate(-50%,-50%)
+                    &:before
+                        content: "\f00b"
+                        font-family: "remixicon"
+                        font-weight: 300
+                        font-size: r(40px)
+                        border: 5px solid #ffffff
+                        border-radius: 50%
+                        width: r(60px)
+                        height: r(60px)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                        color: #ffffff
+                        position: absolute
+                &:hover
+                    .play
+                        background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%) 
+        .swiper-pagination
+            width: 100%
+            margin-top: 10px
+            .swiper-pagination-bullet
+                width: 10px
+                height: 10px
+                background: #dce3e9
+                margin-right: 10px
+                opacity: 1
+                &:focus
+                    outline: unset
+                &.swiper-pagination-bullet-active
+                    background-color: #5b6777 
+                    background-image: linear-gradient(to top, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
+                    &:focus
+                        outline: unset
