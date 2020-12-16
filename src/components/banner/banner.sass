@@ -43,6 +43,11 @@
 // 			line-height: 1
 // 			span 
 // 				font-size: 30 / 16 * 1rem
+@keyframes color
+	0%
+		color: #cccccc
+	100%
+		color: white
 .banner-home
 	max-height: 1080px
 	margin-top: -120/16*1rem
@@ -74,3 +79,39 @@
 		.btn
 			margin-top: 40/16*1rem
 			color: white
+	.wrap-down
+		position: absolute
+		display: inline-block
+		left: 50%
+		bottom: 65px
+		transform: translateX(-50%)
+		span
+			position: absolute
+			display: inline-flex
+			flex-direction: column
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			animation: color 1s infinite
+			width: 36px
+			height: 36px
+			cursor: pointer
+			&::before
+				content: "\ea4e"
+				font-size: 48px
+				font-family: "remixicon"
+				opacity: .6
+				font-weight: 100
+			&:nth-child(1)
+				bottom: 80px
+				color: white
+				animation-delay: .3s
+			&:nth-child(2)
+				bottom: 91px
+				color: #cccccc
+				animation-delay: .2s
+			&:nth-child(3)
+				bottom: 101px
+				color: #cccccc
+				animation-delay: .1s
+			

@@ -51,12 +51,12 @@ function changeNav() {
             desktopWrapper: ".header-2",
             desktopMethod: "appendTo",
             breakpoint: 1200,
-        });   
+        });
         let mainMenu8 = $("header .mobile-wrap").mapping({
             mobileWrapper: "header .header-2",
             mobileMethod: "appendTo",
             breakpoint: 1200,
-        });   
+        });
     }
 
 }
@@ -97,7 +97,7 @@ function menuMobile() {
 
 function search() {
     let searchToggle = $(".search");
-    let searchBox = $("#search");
+    let searchBox = $(".searchbox");
     let root = $("html");
     searchToggle.on("click", function() {
         searchBox.toggleClass("active");
@@ -111,7 +111,7 @@ function search() {
         searchBox.removeClass("active");
         root.css({ "overflow": "visible" });
     });
-    
+
 }
 
 function swiperInit() {
@@ -486,7 +486,7 @@ function swiperInit() {
 }
 
 function scrollToTop() {
-    $(window).scroll(function(){
+    $(window).scroll(function() {
         if ($(this).scrollTop() > 50) {
             $('#backToTop').fadeIn('slow');
             $('#phone').fadeIn('slow');
@@ -495,11 +495,12 @@ function scrollToTop() {
             $('#phone').fadeOut('slow');
         }
     });
-    $('#backToTop').click(function(){
+    $('#backToTop').click(function() {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
 }
+
 function tabActive() {
     $(".tab-navigation li a").on("click", function() {
         $(this)
@@ -545,10 +546,10 @@ function pageBanner() {
 }
 
 function scrollToDiv() {
-    $(".pages-banner-arrow").on("click", function(event) {
+    $(".wrap-down span").on("click", function(event) {
         var hash = this.hash;
         $("html,body").animate({
-                scrollTop: $(".pages-banner").outerHeight(),
+                scrollTop: $("#section-devices").outerHeight(),
             },
             "slow"
         );
