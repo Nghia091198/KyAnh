@@ -1,0 +1,98 @@
+section.block_about
+    .container
+        .section-title Về chúng tôi
+        .row
+            .col-lg-6
+                .content_about-us
+                    p Công ty TNHH Công Nghệ Kỳ Anh có gần 10 năm kinh nghiệm trong lĩnh vực cung cấp các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,….Các dòng mày tại Kỳ Anh luôn phong phú và đa dạng phù hợp nhu cầu của từng khách hàng.
+                    p Ngoài ra, chúng tôi còn phân phối, bảo hành, thay thế linh kiện, phụ kiện máy chính hãng với không chỉ các sản phẩm mà Kỳ Anh cung cấp mà còn là các sản phẩm khác của khách hàng nhưng cần sửa chữa vào bảo dưỡng.
+                    p Với quy trình làm việc nhanh chóng, rõ ràng và chuyên nghiệp, giúp giảm thiểu tổn thất về thời gian và tiền bạc cho khách hàng. Kỳ Anh tự hào với chất lượng dịch vụ chuyên nghiệp, tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành trên cả nước. Luôn luôn đáp ứng mọi nhu cầu từ phía khách hàng của mình một cách tốt nhất.
+            .col-lg-6
+                .item-img
+                    a(data-fancybox="video" href="./img/image/1.png")
+                        .img
+                            img(src="./img/image/1.png", alt="")
+                        .play
+section.block_about-2
+    .container
+        .section-title Ngành nghề chính
+        .section-content Trung Tâm sửa chữa - bảo trì tất cả các loại thiết bị thẩm mỹ công nghệ cao như:
+        .row
+            .col-lg-6.col-md-6
+                .item-img
+                    a(href="#")
+                        .img
+                            img(src="./img/image/1.png", alt="")
+                        .content Các dòng thẩm mỹ công nghệ y tế – làm đẹp – thẩm mỹ
+            .col-lg-6.col-md-6
+                .item-img
+                    a(href="#")
+                        .img
+                            img(src="./img/image/1.png", alt="")
+                        .content Các dòng thẩm mỹ công nghệ y tế – làm đẹp – thẩm mỹ
+        .swiper-about
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<6;i++)
+                        .swiper-slide
+                            .item-img
+                                a(href="#")
+                                    .img
+                                        img(src="./img/image/1.png", alt="")
+                                    .content Các dòng thẩm mỹ công nghệ y tế – làm đẹp – thẩm mỹ
+            .button-arrow
+                .button-prev
+                    span.ri-arrow-left-s-line
+                .button-next
+                    span.ri-arrow-right-s-line
+section.section-why
+    .container
+        .section-title TẠI SAO CHỌN KỲ ANH TECH
+        .swiper-why
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<5;i++)
+                        .swiper-slide
+                            .why-item
+                                .why-img
+                                    img(src="./img/home/8.png", alt="").swiper-lazy.swiper-lazy-loaded
+                                .why-content
+                                    span.blue Hơn 10 năm 
+                                    span kinh nghiệm trong ngành
+section.section-partner
+    .container
+        .box-title
+            .section-title Đối Tác
+            a(href="") Xem tất cả
+        .swiper-partner
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<6;i++)
+                        .swiper-slide
+                            a(href="").item
+                                .img
+                                    img(src="./img/home/9.png", alt="").swiper-lazy.swiper-lazy-loaded
+            .main-button
+                .button-prev
+                    img(src="./img/left.png", alt="")
+                .button-next
+                    img(src="./img/right.png", alt="")
+section.section-assess
+    .container
+        .section-title Đánh giá của khách hàng
+        .swiper-assess
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<3;i++)
+                        .swiper-slide
+                            .item
+                                .content
+                                    .name Chị Xuân Mai
+                                    .position TGD ThẨM mỹ viện LALA
+                                    .text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora rem nemo ratione deleniti beatae odit, incidunt id porro quos cumque tenetur facere nihil assumenda asperiores sequi est officiis corrupti impedit!
+                                .item-img
+                                    a(data-fancybox="video" href="./img/image/3.png")
+                                        .img
+                                            img(src="./img/image/3.png", alt="")
+                                        .play
+            .swiper-pagination

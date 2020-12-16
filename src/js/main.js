@@ -372,6 +372,52 @@ function swiperInit() {
             },
         },
     });
+    var slideRated = new Swiper(".swiper-about .swiper-container", {
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".swiper-about .button-next",
+            prevEl: ".swiper-about .button-prev",
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 30,
+                slidesPerView: 1,
+            },
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            },
+        },
+    });
+    var slideRated = new Swiper(".swiper-assess .swiper-container", {
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".swiper-about .button-next",
+            prevEl: ".swiper-about .button-prev",
+        },
+        pagination: {
+            el: '.swiper-assess .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 1,
+            },
+        },
+    });
     var galleryThumbs = new Swiper('.cosmetic-swiper .gallery-thumbs', {
         spaceBetween: 5,
         loop: false,

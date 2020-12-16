@@ -25,13 +25,17 @@ ul.pagination
 	justify-content: center
 	align-items: center
 	list-style: none
-	padding-left: 0
+	padding: 0
 	width: 100%
-	margin-top: 35/16*1rem
 	li
 		margin-right: 25/16*1rem
 		&:last-child
 			margin-right: 0
+		&.active
+			a
+				background-color: #3bb3f9
+				color: white
+				border: 1px solid #3bb3f9
 		a
 			display: inline-flex
 			width: 40px
@@ -43,10 +47,6 @@ ul.pagination
 			color: #999999
 			font-size: 16px
 			border-radius: 100%
-			&.active
-				background-color: #3bb3f9
-				color: white
-				border: 1px solid #3bb3f9
 			&:hover
 				background-color: #3bb3f9
 				color: white
