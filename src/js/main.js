@@ -480,12 +480,11 @@ function swiperInit() {
             },
         },
     });
-    var slideRated = new Swiper(".swiper-assess .swiper-container", {
+    var slideRated2 = new Swiper(".swiper-assess .swiper-container", {
         spaceBetween: 0,
         speed: 1000,
         observer: true,
         observeParents: true,
-        slidesPerView: 'auto',
         navigation: {
             nextEl: ".swiper-about .button-next",
             prevEl: ".swiper-about .button-prev",
