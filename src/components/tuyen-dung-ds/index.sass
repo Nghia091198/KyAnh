@@ -1,0 +1,89 @@
+.section-recruitment
+    padding: 50/16*1rem 0
+    .section-title
+        margin-bottom: r(30px)
+    .wrap-img
+        display: block
+        .img
+            height: 400px
+            img
+                object-fit: cover
+                width: 100%
+                height: 100%
+    .wrap-content
+        .title
+            font-size: r(24px)
+            color: black
+            font-weight: bold
+            margin-bottom: r(30px)
+            padding-top: r(30px)
+            @media screen and ( max-width: 1023.9px )
+               text-align: center 
+        .content
+            color: #333333
+            font-size: 16px
+            margin-bottom: r(30px)
+            line-height: 1.5
+            &:last-child
+                margin-bottom: 0
+.position-recruitment
+    padding-bottom: r(80px)
+    table
+        @media screen and ( max-width: 1024px )
+            display: none
+        width: 100%
+        box-shadow: 0 0 6px rgba(0,0,0,.3)
+        tr
+            height: 50px
+            td
+                text-align: center
+                color: #666666
+            &:first-child
+                background-color: #44c0f4
+                td
+                    color: white
+                    font-weight: 700
+                    font-size: 16px
+            &:not(:first-child)
+                &:hover
+                    td
+                        color: #91d9f6
+                        cursor: pointer
+                &:nth-child(even)
+                    background-color: #f3f3f3
+    .list-mobile
+        @media screen and ( min-width: 1024.1px )
+            display: none
+        [class*='col-']:nth-child(n+3) .list-item
+            margin-top: r(25px)
+        @media screen and ( max-width: 767.9px )
+            [class*='col-']:nth-child(n+2) .list-item
+                margin-top: r(25px)
+        .list-item
+            border: 1px solid #e1e1e1
+            padding: 25px 15px
+            .title
+                @include line(1)
+                a
+                    display: block
+                    color: #44c0f4
+                    font-size: r(22px)
+                    font-weight: 600
+            p
+                margin-top: 15px
+                margin-left: 15px
+            .btn-primary
+                color: white
+                margin-top: 15px
+                height: 35px
+                background-color: #44c0f4
+                border: 1px solid #44c0f4
+                width: 100%
+                border-radius: 0
+                &:hover
+                    background-color: white
+                    color: black
+                    transition: .3s all ease-in-out
+    .pagination
+        margin-top: r(40px)
+            

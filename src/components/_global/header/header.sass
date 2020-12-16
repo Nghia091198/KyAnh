@@ -14,8 +14,16 @@ header
 	margin-left: auto
 	margin-right: auto
 	transition: .4s all ease-in-out
+	.language
+		&:hover
+			*
+				color: #36c!important
+		.dropdown
+			background-color: rgb(102, 204, 255)!important
+			a
+				color: white!important
 	&.active
-		background-color: rgba(0,0,0,0.5)
+		background-color: white
 		transition: .4s all ease-in-out
 	&.scroll-nav
 		background-color: white
@@ -28,7 +36,8 @@ header
 			.header-bottom
 				padding-left: 1rem
 			.header-right
-				margin-left: auto
+				@media screen and ( min-width: 1200.1px )
+					margin-left: auto
 			.primary-menu
 				.title
 					a
@@ -37,6 +46,8 @@ header
 					&:hover
 						a
 							color: #3366cc
+				&.active
+					top: 69px
 			.language
 				*
 					color: #333333
@@ -72,9 +83,6 @@ header
 				padding-top: 20px
 	.header-bottom
 		padding-left: 140px
-	.toggle-menu 
-		span
-			background-color: #0066cc
 
 .primary-menu
 	display: flex
@@ -156,7 +164,7 @@ header
 				top: 120px
 	&.active
 		width: 100%
-		background-color: rgba($black, 0.6)
+		background-color: white
 		color: white
 		top: 120px
 		transform: translateY(0)
@@ -164,6 +172,13 @@ header
 		opacity: 1
 		visibility: visible
 		height: 100%
+		.dropdown
+			.title
+				a
+					color: #333333
+					&:hover
+						color: #06c
+
 .toggle-menu
 	@media screen and ( min-width: 1200.1px )
 		display: none
@@ -211,11 +226,17 @@ header
 		opacity: 1
 		top: 100%
 		transition: .3s all ease-in-out
-	.header-right
-		position: fixed
-		bottom: 5%
-		left: 50%
-		transform: translateX(-50%)
+		.primary-menu
+			&.active
+				display: flex
+				flex-direction: column
+				// justify-content: center
+				align-items: center
+			.header-right
+				.header-top
+					.language
+						*
+							color: #333333
 #search
 	background: rgba(0,0,0,.7)
 	position: fixed
@@ -247,13 +268,22 @@ header
 		left: 0
 		transition: .4s all ease-in-out
 	.form-group
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
 		em
 			margin-left: -30px
 			color: black
+			font-size: 22px
 		input
 			border-radius: 25px
 			border: unset
 			padding-left: 15px
+			height: 40px
+			width: 30%
+			@media screen and ( max-width: 1024px )
+				width: 290px
 .header-top
 	display: flex
 	padding-top: 10px

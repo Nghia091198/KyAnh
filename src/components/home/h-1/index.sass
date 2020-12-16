@@ -4,17 +4,20 @@
 		text-align: center
 	.bg-about
 		// background: url('../img/home/3.png')100% 100% no-repeat
-	.title
-		color: #0066cc
-		font-size: 30/16*1rem
-		text-transform: uppercase
-		padding-left: 10px
-		@media screen and ( max-width: 1024px )
+	.section-title
+		margin-bottom: r(20px)
+		@media screen and ( max-width: 1023.9px )
 			padding-left: 0
+			text-align: center
 	.content
 		padding-right: 30/16*1rem
+		line-height: 1.5
+		@media screen and ( max-width: 1023.9px )
+			text-align: center
 	.btn
 		margin-top: 40/16*1rem
+		@media screen and ( max-width: 1023.9px )
+			margin: r(30px) auto
 .section-devices
 	padding-top: 50/16*1rem
 	.swiper-devices,.swiper-cosmetic
@@ -93,6 +96,7 @@
 			align-items: center
 			display: flex
 			position: relative
+			box-shadow: 0 0 6px rgba(0,0,0,.2)
 			@media screen and (max-width: 1299.9px)
 				width: auto
 				margin: 0 auto
@@ -152,27 +156,35 @@
 				text-transform: uppercase
 				font-size: 18/16*1rem
 				font-weight: 300
+				margin-bottom: r(15px)
 			.title
 				@media screen and ( min-width: 1920px )
 					font-size: 36/16*1rem
 					line-height: 1.2
 				font-weight: 700
 				font-size: 22/16*1rem
+				margin-bottom: r(15px)
 			.content
 				font-size: 1rem
 				font-weight: 400
+				line-height: 1.5
 				@media screen and (max-width: 480px)
 					height: 200px
 					overflow: scroll
-			.bg-content
-				background: url("../img/bg.png") no-repeat
-				position: absolute
-				height: 100%
-				left: 0
-				top: 0
-				width: 100%
-				background-position-x: right
-				background-position-y: bottom
+	.on-row
+        .repair-content
+            @media screen and ( max-width: 1299.9px )
+                height: 250px
+            .content
+                @media screen and ( max-width: 1300px )
+                    height: 80px
+                    overflow: auto
+        @media screen and ( max-width: 1299.9px )
+            .img
+                a
+                    height: 330px
+                    img
+                        object-fit: cover
 .section-timerepair
 	padding-top: 40/16*1rem
 	.timeto
@@ -184,10 +196,12 @@
 		display: block
 		overflow: hidden
 		background: url("../img/bg.png") no-repeat
-		background-position-y: 120%
-		background-position-x: 150%
+		background-position-x: right
+		background-position-y: bottom
+		background-size: contain 
 		position: relative
 		transition: all .2s ease-in-out
+		box-shadow: 0 0 6px rgba(0,0,0,.1)
 		.time
 			font-size: 30/16*1rem
 			font-weight: 700
@@ -195,7 +209,10 @@
 		&:hover
 			transition: all .2s ease-in-out
 			box-shadow: 9px 12px 30px rgba(0,0,0,0.05)
-			background:  linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+			background: url("../img/bg.png") no-repeat,linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+			background-position-x: right
+			background-position-y: bottom
+			background-size: contain 
 			*
 				color: white
 	[class*="col-"]:nth-child(n+3)
@@ -264,7 +281,9 @@
 				font-size: 20/16*1rem
 				font-weight: 700
 				position: relative
-				padding-left: 25/16*1rem 
+				padding-left: 25/16*1rem
+				margin-top: 15px 
+				margin-bottom: 5px 
 				&:before
 					content: ""
 					position: absolute
@@ -280,11 +299,12 @@
 				font-weight: 300
 				padding-left: 25/16*1rem
 		.gallery-thumbs
-			// &.swiper-container
-			// 	margin-left: 0
-			// 	margin-right: 0
+			@media screen and ( max-width: 1023.9px )
+				margin-top: r(30px)
 			.swiper-wrapper
-				padding-right: 21px
+				padding-left: 21px
+				@media screen and ( max-width: 1023.9px )
+					padding-left: 0
 				.swiper-slide
 					height: 120px!important
 					cursor: pointer
@@ -293,6 +313,8 @@
 						width: 231px!important
 						height: 120px!important
 						object-fit: cover
+						@media screen and ( max-width: 459.9px )
+							width: 100%!important
 				.swiper-slide.swiper-slide-visible.swiper-slide-next,
 				.swiper-slide.swiper-slide-visible
 					img
@@ -341,65 +363,107 @@
 			.button-next
 				right: -50px
 .section-rated
-	padding-top: 40/16*1rem
-	background-color: #f4f7fa
-	.section-title
-		margin-bottom: 30/16*1rem
-	.swiper-rated
-		.swiper-slide
-			@media screen and ( min-width: 1366px )	
-				width: 810px!important
-				height: 500px!important
-			.item
-				a
+	padding-top: 60/16*1rem
+	.rate-border
+		padding-bottom: r(120px)
+		// margin-bottom: r(60px)
+		border-bottom: 1px solid #ebebeb
+	.box-title
+		margin-bottom: r(30px)
+		*
+			color: #0066cc
+	[class*='col-']:nth-child(2)
+		padding-left: r(30px)
+		@media screen and ( max-width: 1023.9px )
+			margin-top: r(100px)
+	.swiper-hot-sale
+		.item
+			display: block
+			text-align: center
+			position: relative
+			border: 1px solid #e8edf2
+			height: 285px
+			.img
+				padding: 20/16*1rem 0
+				width: 100%
+				height: 223px
+				position: relative
+				.wrap-sale
+					content: ""
+					position: absolute
+					width: 50px
+					height: 50px
+					background-color: #2072be
+					color: white
+					font-size: 12px
+					font-weight: 500
+					text-transform: capitalize
 					display: flex
-					justify-content: center
 					align-items: center
-					position: relative
-					.play
+					justify-content: center
+					border-radius: 100%
+					top: 10px
+					left: 10px
+					padding: 5px
+				img
+					object-fit: cover
+					height: 100%
+			.title
+				display: flex
+				align-items: center
+				font-size: 18/16*1rem
+				color: #111111
+				justify-content: center
+				height: 60px
+				border-top: 1px solid #e8edf2
+				border-bottom: 1px solid #e8edf2
+			&:hover
+				.img
+					border: 1px solid #3399ff
+				.title
+					background-color: #54cbf6
+					background-image: linear-gradient(to bottom, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+					color: white
+					border-top: 1px solid #3399ff
+	.swiper-rated
+		.item
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				position: relative
+				height: 285px
+				@media screen and ( max-width: 1023.9px )
+					height: 100%
+				.play
+					position: absolute
+					width: 75px
+					height: 75px
+					&:before
+						content: "\F040D"
+						font: normal normal normal 24px/1 "Material Design Icons"
+						font-size: 60px
+						top: 50%
+						left: 50%
+						transform: translate(-50%,-50%)
+						color: white
 						position: absolute
-						width: 75px
-						height: 75px
-						&:before
-							content: "\F040D"
-							font: normal normal normal 24px/1 "Material Design Icons"
-							font-size: 60px
-							top: 50%
-							left: 50%
-							transform: translate(-50%,-50%)
-							color: white
-							position: absolute
-					&:hover
-						.play
-							border-radius: 50%
-							background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+				&:hover
+					.play
+						border-radius: 50%
+						background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 .section-news
 	padding: 50/16*1rem 0 120/16*1rem
-	background-color: #f4f7fa
 	.section-title
 		margin-bottom: 30/16*1rem
 	.swiper-news
 		position: relative
-		.swiper-pagination
-			width: 100%
-			margin-top: 45/16*1rem
-			.swiper-pagination-bullet
-				width: 10px
-				height: 10px
-				background: #dce3e9
-				margin-right: 10px
-				opacity: 1
-				&:focus
-					outline: unset
-				&.swiper-pagination-bullet-active
-					background-color: #5b6777 
-					background-image: linear-gradient(to top, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
-					&:focus
-						outline: unset
 	.item
 		background-color: white
 		display: block
 		position: relative
+		box-shadow: 0 0 6px rgba(0,0,0,0.1)
+		border-bottom: 1px solid #ebebeb
 		.img
 			height: 260px
 			overflow: hidden
@@ -422,6 +486,7 @@
 				display: flex
 				justify-content: space-between
 				align-items: center
+				font-weight: 700
 				.linear
 					display: none
 		&::before
@@ -434,12 +499,18 @@
 			background-image: linear-gradient(to right, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
 			display: none
 		&:hover
-			box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.05)
 			.title
-				color: #4ebaf9
+				background: linear-gradient(90deg,#3195fc 0,#3195fc 30%,#40c3f7 0)
+				-webkit-background-clip: text!important
+				background-clip: text
+				color: transparent
 			.seemore 
-				*
-					color: #00308f
+				span
+					background-image: linear-gradient(to top, #4482d5 0%, #4482d5 5%, #54c7f8 100%)
+					-webkit-background-clip: text!important
+					background-clip: text
+					color: transparent
+			.seemore 
 				.black
 					display: none
 				.linear
@@ -452,103 +523,114 @@
 .section-registration
 	background-color: #003399
 	height: auto
+	position: relative
 	background: url("../img/bg3.png")no-repeat
 	background-position-y: 80px
 	background-position-x: 12%
 	padding-bottom: 50/16*1rem
 	@media screen and ( min-width: 1920px )
 		height: 370px
+	@media screen and ( max-width: 575px )
+		.row
+			margin-right: 0
+			margin-left: 0
 	.fade-bg
 		background: url("../img/bg4.png")no-repeat
 		height: 100%
 		background-size: contain	
-		background-position-x: 85%
-		background-position-y: 50px
+		background-position-x: right
+		background-position-y: bottom
+		background-size: contain
+		width: 100%
+		height: 100%
+		right: 50px
+		position: absolute 
 		@media screen and ( max-width: 1023.9px )
-			background: unset
-		.desc
+			display: none
+	.desc
+		text-align: center
+		color: white
+		font-size: 30/16*1rem
+		padding: 40/16*1rem 135/16*1rem 30/16*1rem
+		line-height: 1.2
+		@media screen and ( max-width: 1023.9px )
+			padding: 40/16*1rem 20/16*1rem
+	input[type="text"]
+		width: 230px
+		height: 60px
+		box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.1)
+		border-radius: 2px
+		background-color: #ffffff
+		border: unset
+		padding: 25/16*1rem
+		@media screen and ( max-width: 1023.9px )
+			width: 50%
+		@media screen and ( max-width: 768px )
+			width: 100%
+	.form-group
+		@media screen and ( max-width: 1023.9px )
+			width: 100%
 			text-align: center
-			color: white
-			font-size: 30/16*1rem
-			padding: 40/16*1rem 135/16*1rem 30/16*1rem
-			line-height: 1.2
-			@media screen and ( max-width: 1023.9px )
-				padding: 40/16*1rem 20/16*1rem
 		input[type="text"]
-			width: 230px
-			height: 60px
-			box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.1)
-			border-radius: 2px
-			background-color: #ffffff
-			border: unset
-			padding: 25/16*1rem
+			margin-right: 20/16*1rem
 			@media screen and ( max-width: 1023.9px )
-				width: 50%
-			@media screen and ( max-width: 768px )
-				width: 100%
-		.form-group
-			@media screen and ( max-width: 1023.9px )
-				width: 100%
-				text-align: center
-			input[type="text"]
-				margin-right: 20/16*1rem
-				@media screen and ( max-width: 1023.9px )
-					margin-right: 0
-					margin-bottom: 20/16*1rem
-			&:nth-child(3) input[type="text"]
 				margin-right: 0
-			.frm-btn
-				position: relative
-				height: 100%
-				width: 60px
-				display: flex
-				justify-content: center
-				align-items: center
-				@media screen and ( max-width: 1023.9px )
-					margin: 0 auto
-					width: 50%
-					height: 60px
-				&::before
-					content: "\F0501"
-					position: absolute
-					left: 50%
-					transform: translateX(-50%)
-					font: normal normal normal 30px/1 "Material Design Icons"
-					color: white
-					pointer-events: auto
-					cursor: pointer
-				input[type="submit"]
-					width: 100%
-					height: 100%
-					border-radius: 0 2px 2px 0
-					background-color: #54cbf6
-					background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
-					border: unset
-		.wrap-content
-			padding-top: 30/16*1rem
+				margin-bottom: 20/16*1rem
+		&:nth-child(3) input[type="text"]
+			margin-right: 0
+		.frm-btn
+			position: relative
+			height: 100%
+			width: 60px
+			display: flex
 			justify-content: center
 			align-items: center
-			display: flex
-			*
+			@media screen and ( max-width: 1023.9px )
+				margin: 0 auto
+				width: 50%
+				height: 60px
+			&::before
+				content: "\f0d9"
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				font-family: "remixicon"
 				color: white
-			span
-				font-weight: 700
-				font-size: 30/16*1rem
-				display: inline-block
-				position: relative
-				line-height: 1
-				&::before
-					content: ""
-					height: 60%
-					position: absolute
-					width: 1px
-					background-color: white
-					left: -20px
-					top: 50%
-					transform: translateY(-50%)
-			em
-				padding-right: 35/16*1rem
-				font-size: 28/16*1rem
+				pointer-events: auto
+				cursor: pointer
+				font-size: 24px
+			input[type="submit"]
+				width: 100%
+				height: 100%
+				border-radius: 0 2px 2px 0
+				background-color: #54cbf6
+				background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+				border: unset
+	.wrap-content
+		padding-top: 30/16*1rem
+		justify-content: center
+		align-items: center
+		display: flex
+		*
+			color: white
+		span
+			font-weight: 700
+			font-size: 30/16*1rem
+			display: inline-block
+			position: relative
+			line-height: 1
+			&::before
+				content: ""
+				height: 60%
+				position: absolute
+				width: 1px
+				background-color: white
+				left: -20px
+				top: 50%
+				transform: translateY(-50%)
+		em
+			padding-right: 35/16*1rem
+			font-size: 28/16*1rem
 			
 
 

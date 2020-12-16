@@ -1,5 +1,5 @@
-function changeNav () {
-    if($("body").hasClass("homepage")) {
+function changeNav() {
+    if ($("body").hasClass("homepage")) {
         $('.header-2').hide();
         $(window).scroll(function() {
             if ($(document).scrollTop() >= 100) {
@@ -9,25 +9,56 @@ function changeNav () {
                 $(".header-bottom").appendTo(".header-2");
                 $(".header-right").appendTo(".header-2");
                 $(".header-right").appendTo(".header-2");
-                $(".mobile-wrap.active .primary-menu.active").css({"top":"72px"});
-            }
-            else {
+                $(".toggle-menu span").css({ "background-color": "#06c" });
+                let mainMenu2 = $("header .header-2 .header-right").mapping({
+                    mobileWrapper: "header .mobile-wrap .primary-menu",
+                    mobileMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+                let mainMenu4 = $("header .mobile-wrap").mapping({
+                    mobileWrapper: "header .header-2",
+                    mobileMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+            } else {
                 $(".header-1").fadeIn('slow');
                 $('.header-2').hide();
                 $("header").removeClass("scroll-nav");
                 $(".header-bottom").appendTo(".header-1");
                 $(".header-right").appendTo(".header-1 .header-about");
-                $(".mobile-wrap.active .primary-menu.active").css({"top":"120px"});
-            }
+                $(".toggle-menu span").css({ "background-color": "white" });
+                let mainMenu3 = $("header .header-1 .header-right").mapping({
+                    mobileWrapper: "header .mobile-wrap .primary-menu",
+                    mobileMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+                let mainMenu4 = $("header .mobile-wrap").mapping({
+                    mobileWrapper: "header .container",
+                    mobileMethod: "appendTo",
+                    breakpoint: 1200,
+                });
+            };
         });
-    }else {
-        $("header .header-1").css({"display":"none"});
+    } else {
+        $("header .header-1").css({ "display": "none" });
         $("header").addClass("scroll-nav");
+        $(".toggle-menu span").css({ "background-color": "#036" });
         $(".header-bottom").appendTo(".header-2");
         $(".header-right").appendTo(".header-2");
-        $(".header-right").appendTo(".header-2");
-        $(".mobile-wrap.active .primary-menu.active").css({"top":"72px"});
+        let mainMenu7 = $("header .header-right").mapping({
+            mobileWrapper: "header .primary-menu",
+            mobileMethod: "appendTo",
+            desktopWrapper: ".header-2",
+            desktopMethod: "appendTo",
+            breakpoint: 1200,
+        });   
+        let mainMenu8 = $("header .mobile-wrap").mapping({
+            mobileWrapper: "header .header-2",
+            mobileMethod: "appendTo",
+            breakpoint: 1200,
+        });   
     }
+
 }
 
 function mappingMenu() {
@@ -39,59 +70,49 @@ function mappingMenu() {
         breakpoint: 1200,
     });
     let mainNav = $("header .header-about .header-right").mapping({
-        mobileWrapper: "header .mobile-wrap",
+        mobileWrapper: "header .mobile-wrap .primary-menu",
         mobileMethod: "appendTo",
         desktopWrapper: "header .header-about",
         desktopMethod: "appendTo",
         breakpoint: 1024,
     });
-    // let mainMenuTop = $("header .top-wrap .menu-list").mapping({
-    // 	mobileWrapper: "header .mobile-wrap",
-    // 	mobileMethod: "appendTo",
-    // 	desktopWrapper: "header .top-wrap .main-menu-top",
-    // 	desktopMethod: "appendTo",
-    // 	breakpoint: 768,
-    // });
-    // let searchBox = $("header .top-wrap .searchbox").mapping({
-    // 	mobileWrapper: "header .mobile-wrap",
-    // 	mobileMethod: "appendTo",
-    // 	desktopWrapper: "header .top-wrap .main-search",
-    // 	desktopMethod: "appendTo",
-    // 	breakpoint: 576,
-    // });
 }
 
 function menuMobile() {
     let toggle = $(".toggle-menu");
     let menuMobile = $(".mobile-wrap");
     let primaryMenu = $(".primary-menu");
-    toggle.on("click", function () {
+    let root = $("html");
+    toggle.on("click", function() {
         $(this).toggleClass("active");
         menuMobile.toggleClass("active");
         primaryMenu.toggleClass("active");
-    })
+        if (menuMobile.hasClass("active")) {
+            root.css({ "overflow": "hidden" });
+        } else {
+            root.css({ "overflow": "visible" });
+        }
+    });
 }
 
 function search() {
     let searchToggle = $(".search");
     let searchBox = $("#search");
-    searchToggle.on("click", function () {
+    let root = $("html");
+    searchToggle.on("click", function() {
         searchBox.toggleClass("active");
+        if (searchBox.hasClass("active")) {
+            console.log("ok");
+            root.css({ "overflow": "hidden" });
+        }
     });
-
     let btnClose = $(".btn-close");
-    btnClose.on("click", function () {
+    btnClose.on("click", function() {
         searchBox.removeClass("active");
+        root.css({ "overflow": "visible" });
     });
+    
 }
-// function menuMobile() {
-// 	let hamburger = $(".button-hambuger .burger-bt-inner");
-// 	let menuMobile = $(".mobile-wrap");
-// 	hamburger.on("click", function () {
-// 		$(this).toggleClass("active");
-// 		menuMobile.toggleClass("active");
-// 	});
-// }
 
 function swiperInit() {
     // var bannerHome = new Swiper(".banner-home .swiper-container", {
@@ -132,7 +153,7 @@ function swiperInit() {
     //     }
     // );
 
-    
+
     //MY CODE
     var slideDevices = new Swiper(".swiper-devices .swiper-container", {
         // slidesPerView: 1.6,
@@ -223,7 +244,7 @@ function swiperInit() {
     var slidePartner = new Swiper(".swiper-partner .swiper-container", {
         // slidesPerView: 1.6,
         // centeredSlides: true,
-        spaceBetween: 0,
+        spaceBetween: 10,
         speed: 1000,
         observer: true,
         loop: true,
@@ -253,14 +274,44 @@ function swiperInit() {
     var slideNews = new Swiper(".swiper-news .swiper-container", {
         // slidesPerView: 1.6,
         // centeredSlides: true,
-        spaceBetween: 0,
+        spaceBetween: 10,
         speed: 1000,
         observer: true,
         loop: true,
         observeParents: true,
         pagination: {
-            el: '.swiper-news .swiper-pagination',
+            el: '.swiper-news .bullet-pagination .swiper-pagination',
             clickable: true,
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+                centeredSlides: false,
+            },
+        },
+    });
+    var slideNewsRelated = new Swiper(".swiper-newsrelated .swiper-container", {
+        // slidesPerView: 1.6,
+        // centeredSlides: true,
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        observeParents: true,
+        navigation: {
+            nextEl: ".swiper-newsrelated .button-next",
+            prevEl: ".swiper-newsrelated .button-prev",
         },
         breakpoints: {
             460: {
@@ -300,7 +351,7 @@ function swiperInit() {
                 centeredSlides: false,
             },
             768: {
-                spaceBetween: 10,
+                spaceBetween: 30,
                 slidesPerView: 3,
                 centeredSlides: false,
                 slidesPerColumn: 1,
@@ -353,7 +404,10 @@ function swiperInit() {
         loop: true,
         centeredSlides: false,
         observeParents: true,
-        slidesPerView: 'auto',
+        pagination: {
+            el: '.swiper-rated .bullet-pagination .swiper-pagination',
+            clickable: true,
+        },
         breakpoints: {
             460: {
                 spaceBetween: 10,
@@ -362,12 +416,41 @@ function swiperInit() {
             },
             768: {
                 spaceBetween: 10,
-                slidesPerView: 3,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
             1024: {
-                spaceBetween: 30,
-                slidesPerView: 3,
+                spaceBetween: 20,
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+        },
+    });
+    var slideHotSale = new Swiper(".swiper-hot-sale .swiper-container", {
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        centeredSlides: false,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-hot-sale .bullet-pagination .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 20,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
         },
@@ -447,8 +530,24 @@ function swiperInit() {
         },
     });
 }
+
+function scrollToTop() {
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $('#backToTop').fadeIn('slow');
+            $('#phone').fadeIn('slow');
+        } else {
+            $('#backToTop').fadeOut('slow');
+            $('#phone').fadeOut('slow');
+        }
+    });
+    $('#backToTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+}
 function tabActive() {
-    $(".tab-navigation li a").on("click", function () {
+    $(".tab-navigation li a").on("click", function() {
         $(this)
             .parents(".tab-navigation")
             .find("li")
@@ -470,10 +569,10 @@ function tabActive() {
     });
 }
 
-window.onload = function () {
+window.onload = function() {
     $(".block-2_cosmetic-detail .overlay, .block-2_cosmetic-detail .modal").addClass('active');
 };
-$('.block-2_cosmetic-detail .overlay, .close').click(function () {
+$('.block-2_cosmetic-detail .overlay, .close').click(function() {
     $('.block-2_cosmetic-detail .overlay, .block-2_cosmetic-detail .modal').toggleClass("active");
 });
 
@@ -492,18 +591,18 @@ function pageBanner() {
 }
 
 function scrollToDiv() {
-    $(".pages-banner-arrow").on("click", function (event) {
+    $(".pages-banner-arrow").on("click", function(event) {
         var hash = this.hash;
         $("html,body").animate({
-            scrollTop: $(".pages-banner").outerHeight(),
-        },
+                scrollTop: $(".pages-banner").outerHeight(),
+            },
             "slow"
         );
     });
 }
 
 function Acordition() {
-    $(".faq-list .faq-item").click(function (e) {
+    $(".faq-list .faq-item").click(function(e) {
         var t = $(this).closest(".faq-item").find(".content");
         $(this).closest(".faq-list").find(".content").not(t).slideUp();
         $(this).hasClass("active") ?
@@ -522,7 +621,7 @@ function Acordition() {
 // });
 
 const selectDis = () => {
-    $(".select-item .title-select").click(function () {
+    $(".select-item .title-select").click(function() {
         var t = $(this).closest(".select-item").find(".content");
         $(this).closest(".wrap-select").find(".content").not(this).slideUp();
         if ($(this).hasClass("active")) {
@@ -539,7 +638,7 @@ const selectDis = () => {
 };
 
 $(document).ready(function() {
-    AOS.init();
+
     // setBackgroundElement();
     changeNav();
     mappingMenu();
@@ -549,6 +648,8 @@ $(document).ready(function() {
     swiperInit();
     pageBanner();
     scrollToDiv();
+    scrollToTop();
     selectDis();
     tabActive();
+    // AOS.init();
 });
