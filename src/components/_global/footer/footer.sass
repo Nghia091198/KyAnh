@@ -16,6 +16,8 @@ footer
 			color: #333333
 			a
 				display: inline-block
+				&:hover
+					color: #0c59b4
 			.blue
 				color: #0c59b4
 				font-weight: bold
@@ -80,3 +82,66 @@ footer
 								display: none
 						&:nth-child(n+3)
 							margin-top: 10px
+#backToTop
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	position: fixed
+	bottom: 20vh
+	right: 20px
+	border: 1px solid #a3d1fe
+	cursor: pointer
+	&::before
+		content: "\ea76"
+		font-family: "remixicon"
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: #a3d1fe
+		font-size: 24px
+	&:hover
+		background-color: #3db9f8
+		border: 1px solid #3db9f8
+		transition: .3s all ease-in-out
+		&::before
+			color: white
+@keyframes popin
+	0%
+		transform: rotate(0) scale(1) skew(1deg)
+	10%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	20%
+		transform: rotate(0) scale(1.2) skew(1deg)
+	30%
+		transform: rotate(25deg) scale(1.2) skew(1deg)
+	40%
+		transform: rotate(0) scale(1) skew(1deg)
+	50%
+		transform: rotate(-25deg) scale(1.2) skew(1deg)
+	60%
+		transform: rotate(0) scale(1) skew(1deg)
+	100%
+		transform: rotate(0) scale(1) skew(1deg)
+#phone
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	position: fixed
+	bottom: 10vh
+	right: 20px
+	background-color: #3cb5f9
+	color: white
+	cursor: pointer
+	animation: popin 2s infinite ease-in-out
+	&::before
+		content: "\efe9"
+		font-family: "remixicon"
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 24px
+
+		
+		

@@ -281,7 +281,9 @@
 				font-size: 20/16*1rem
 				font-weight: 700
 				position: relative
-				padding-left: 25/16*1rem 
+				padding-left: 25/16*1rem
+				margin-top: 15px 
+				margin-bottom: 5px 
 				&:before
 					content: ""
 					position: absolute
@@ -361,65 +363,107 @@
 			.button-next
 				right: -50px
 .section-rated
-	padding-top: 40/16*1rem
-	background-color: #f4f7fa
-	.section-title
-		margin-bottom: 30/16*1rem
-	.swiper-rated
-		.swiper-slide
-			@media screen and ( min-width: 1366.1px )	
-				width: 810px!important
-				height: 500px!important
-			.item
-				a
+	padding-top: 60/16*1rem
+	.rate-border
+		padding-bottom: r(120px)
+		// margin-bottom: r(60px)
+		border-bottom: 1px solid #ebebeb
+	.box-title
+		margin-bottom: r(30px)
+		*
+			color: #0066cc
+	[class*='col-']:nth-child(2)
+		padding-left: r(30px)
+		@media screen and ( max-width: 1023.9px )
+			margin-top: r(100px)
+	.swiper-hot-sale
+		.item
+			display: block
+			text-align: center
+			position: relative
+			border: 1px solid #e8edf2
+			height: 285px
+			.img
+				padding: 20/16*1rem 0
+				width: 100%
+				height: 223px
+				position: relative
+				.wrap-sale
+					content: ""
+					position: absolute
+					width: 50px
+					height: 50px
+					background-color: #2072be
+					color: white
+					font-size: 12px
+					font-weight: 500
+					text-transform: capitalize
 					display: flex
-					justify-content: center
 					align-items: center
-					position: relative
-					.play
+					justify-content: center
+					border-radius: 100%
+					top: 10px
+					left: 10px
+					padding: 5px
+				img
+					object-fit: cover
+					height: 100%
+			.title
+				display: flex
+				align-items: center
+				font-size: 18/16*1rem
+				color: #111111
+				justify-content: center
+				height: 60px
+				border-top: 1px solid #e8edf2
+				border-bottom: 1px solid #e8edf2
+			&:hover
+				.img
+					border: 1px solid #3399ff
+				.title
+					background-color: #54cbf6
+					background-image: linear-gradient(to bottom, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+					color: white
+					border-top: 1px solid #3399ff
+	.swiper-rated
+		.item
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				position: relative
+				height: 285px
+				@media screen and ( max-width: 1023.9px )
+					height: 100%
+				.play
+					position: absolute
+					width: 75px
+					height: 75px
+					&:before
+						content: "\F040D"
+						font: normal normal normal 24px/1 "Material Design Icons"
+						font-size: 60px
+						top: 50%
+						left: 50%
+						transform: translate(-50%,-50%)
+						color: white
 						position: absolute
-						width: 75px
-						height: 75px
-						&:before
-							content: "\F040D"
-							font: normal normal normal 24px/1 "Material Design Icons"
-							font-size: 60px
-							top: 50%
-							left: 50%
-							transform: translate(-50%,-50%)
-							color: white
-							position: absolute
-					&:hover
-						.play
-							border-radius: 50%
-							background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+				&:hover
+					.play
+						border-radius: 50%
+						background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 .section-news
 	padding: 50/16*1rem 0 120/16*1rem
-	background-color: #f4f7fa
 	.section-title
 		margin-bottom: 30/16*1rem
 	.swiper-news
 		position: relative
-		.swiper-pagination
-			width: 100%
-			margin-top: 45/16*1rem
-			.swiper-pagination-bullet
-				width: 10px
-				height: 10px
-				background: #dce3e9
-				margin-right: 10px
-				opacity: 1
-				&:focus
-					outline: unset
-				&.swiper-pagination-bullet-active
-					background-color: #5b6777 
-					background-image: linear-gradient(to top, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
-					&:focus
-						outline: unset
 	.item
 		background-color: white
 		display: block
 		position: relative
+		box-shadow: 0 0 6px rgba(0,0,0,0.1)
+		border-bottom: 1px solid #ebebeb
 		.img
 			height: 260px
 			overflow: hidden
@@ -442,6 +486,7 @@
 				display: flex
 				justify-content: space-between
 				align-items: center
+				font-weight: 700
 				.linear
 					display: none
 		&::before
@@ -454,12 +499,18 @@
 			background-image: linear-gradient(to right, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
 			display: none
 		&:hover
-			box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.05)
 			.title
-				color: #4ebaf9
+				background: linear-gradient(90deg,#3195fc 0,#3195fc 30%,#40c3f7 0)
+				-webkit-background-clip: text!important
+				background-clip: text
+				color: transparent
 			.seemore 
-				*
-					color: #00308f
+				span
+					background-image: linear-gradient(to top, #4482d5 0%, #4482d5 5%, #54c7f8 100%)
+					-webkit-background-clip: text!important
+					background-clip: text
+					color: transparent
+			.seemore 
 				.black
 					display: none
 				.linear
@@ -539,14 +590,15 @@
 				width: 50%
 				height: 60px
 			&::before
-				content: "\F0501"
+				content: "\f0d9"
 				position: absolute
 				left: 50%
 				transform: translateX(-50%)
-				font: normal normal normal 30px/1 "Material Design Icons"
+				font-family: "remixicon"
 				color: white
 				pointer-events: auto
 				cursor: pointer
+				font-size: 24px
 			input[type="submit"]
 				width: 100%
 				height: 100%

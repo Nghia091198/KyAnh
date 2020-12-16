@@ -55,4 +55,22 @@ ul.pagination
 				color: white
 				border: 1px solid #3bb3f9
 				transition: all .3s ease-in-out
+.bullet-pagination
+	position: relative
+	.swiper-pagination
+		width: 100%
+		margin-top: 45/16*1rem
+		.swiper-pagination-bullet
+			width: 10px
+			height: 10px
+			background: #dce3e9
+			margin-right: 10px
+			opacity: 1
+			&:focus
+				outline: unset
+			&.swiper-pagination-bullet-active
+				background-color: #5b6777 
+				background-image: linear-gradient(to top, #0064cc 0%, #0064cc 1%, #40c3f7 100%)
+				&:focus
+					outline: unset
 		

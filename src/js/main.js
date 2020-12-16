@@ -280,18 +280,18 @@ function swiperInit() {
         loop: true,
         observeParents: true,
         pagination: {
-            el: '.swiper-news .swiper-pagination',
+            el: '.swiper-news .bullet-pagination .swiper-pagination',
             clickable: true,
         },
         breakpoints: {
             460: {
                 spaceBetween: 10,
-                slidesPerView: 2,
+                slidesPerView: 1,
                 centeredSlides: false,
             },
             768: {
                 spaceBetween: 10,
-                slidesPerView: 3,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
             1024: {
@@ -404,6 +404,10 @@ function swiperInit() {
         loop: true,
         centeredSlides: false,
         observeParents: true,
+        pagination: {
+            el: '.swiper-rated .bullet-pagination .swiper-pagination',
+            clickable: true,
+        },
         breakpoints: {
             460: {
                 spaceBetween: 10,
@@ -417,7 +421,36 @@ function swiperInit() {
             },
             1024: {
                 spaceBetween: 20,
-                slidesPerView: 3,
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+        },
+    });
+    var slideHotSale = new Swiper(".swiper-hot-sale .swiper-container", {
+        spaceBetween: 0,
+        speed: 1000,
+        observer: true,
+        loop: true,
+        centeredSlides: false,
+        observeParents: true,
+        pagination: {
+            el: '.swiper-hot-sale .bullet-pagination .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+            768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            1024: {
+                spaceBetween: 20,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
         },
@@ -452,6 +485,21 @@ function swiperInit() {
     });
 }
 
+function scrollToTop() {
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 50) {
+            $('#backToTop').fadeIn('slow');
+            $('#phone').fadeIn('slow');
+        } else {
+            $('#backToTop').fadeOut('slow');
+            $('#phone').fadeOut('slow');
+        }
+    });
+    $('#backToTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+}
 function tabActive() {
     $(".tab-navigation li a").on("click", function() {
         $(this)
@@ -554,6 +602,7 @@ $(document).ready(function() {
     swiperInit();
     pageBanner();
     scrollToDiv();
+    scrollToTop();
     selectDis();
     tabActive();
     // AOS.init();

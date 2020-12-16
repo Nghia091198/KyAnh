@@ -6,11 +6,11 @@ section.section-about
 					.section-title.text-left về chúng tôi
 					.content.text-left Công ty chuyên phân phối các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,…… (các dòng máy phong phú đa dạng phù hợp nhu cầu của từng khách hàng). Phân phối và thay thế linh kiện, phụ kiện máy chính hãng.Quy trình làm việc nhanh chóng giúp giảm thiểu tổn thất cho khách hàng. Tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành.
 					a(href="").btn.gradient-border xem thêm
-						em.mdi.mdi-plus
+						em.ri-add-line
 			.col-lg-6.col-md-12
 				.img
 					img(src="./img/home/2.png", alt="").lazyloaded
-section.section-devices(data-aos="fade-up")
+section.section-devices
 	.container
 		.section-title Thiết bị thẩm mỹ
 		.swiper-devices
@@ -24,11 +24,11 @@ section.section-devices(data-aos="fade-up")
 								.title Máy ánh sáng
 			.main-button
 				.button-prev
-					em.mdi.mdi-chevron-left
+					em.ri-arrow-left-s-line
 				.button-next
-					em.mdi.mdi-chevron-right
+					em.ri-arrow-right-s-line
 		a(href="").btn.gradient-border XEM tất cả
-			em.mdi.mdi-plus
+			em.ri-add-line
 section.section-repair
 	.container
 		.on-row
@@ -50,7 +50,7 @@ section.section-timerepair
 						.bg-content
 						.time 60' - 90'
 						.desc đối với khu vực ngoại thành Hồ Chí Minh
-section.section-why(data-aos="fade-up")
+section.section-why
 	.container
 		.section-title TẠI SAO CHỌN KỲ ANH TECH
 		.swiper-why
@@ -78,17 +78,17 @@ section.section-devices
 								.title Máy ánh sáng
 			.main-button
 				.button-prev
-					em.mdi.mdi-chevron-left
+					em.ri-arrow-left-s-line
 				.button-next
-					em.mdi.mdi-chevron-right
+					em.ri-arrow-right-s-line
 		a(href="").btn.gradient-border XEM tất cả
-			em.mdi.mdi-plus
+			em.ri-add-line
 section.section-library
 	.container
 		.box-title
 			.section-title Thư viện
 			a(href="") Xem tất cả
-		.swiper-library(data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000")
+		.swiper-library
 			.swiper-container.gallery-top
 				.swiper-wrapper
 					.swiper-slide
@@ -134,7 +134,7 @@ section.section-library
 						.img
 							img(src="./img/home/14.png", alt="")
 						
-section.section-partner(data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine")
+section.section-partner
 	.container
 		.box-title
 			.section-title Đối Tác
@@ -154,17 +154,40 @@ section.section-partner(data-aos="fade-right" data-aos-offset="300" data-aos-eas
 					img(src="./img/right.png", alt="")
 section.section-rated
 	.container
-		.section-title đánh giá của khách hàng
-	.swiper-rated
-		.swiper-container
-			.swiper-wrapper
-				-for(i=0;i<3;i++)
-					.swiper-slide
-						.item
-							a(data-fancybox="video" href="./img/home/11.png")
-								img(src="./img/home/11.png", alt="").swiper-lazy.swiper-lazy-loaded
-								.play
-section.section-news(data-aos="fade-up" data-aos-duration="1500")
+		.rate-border
+			.row
+				.col-lg-6
+					.box-title
+						.section-title SẢN PHẨM BÁN CHẠY NHẤT
+						a(href="") Xem tất cả
+					.swiper-hot-sale
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0;i<3;i++)
+									.swiper-slide
+										a(href="").item
+											.img
+												img(src="./img/home/6.png", alt="").swiper-lazy.swiper-lazy-loaded
+												.wrap-sale Bán Chạy
+											.title Máy ánh sáng
+						.bullet-pagination
+							.swiper-pagination
+				.col-lg-6
+					.box-title
+						.section-title đánh giá của khách hàng
+						a(href="") Xem tất cả
+					.swiper-rated
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0;i<3;i++)
+									.swiper-slide
+										.item
+											a(data-fancybox="video" href="./img/home/11.png")
+												img(src="./img/home/11.png", alt="").swiper-lazy.swiper-lazy-loaded
+												.play
+						.bullet-pagination
+							.swiper-pagination
+section.section-news
 	.container
 		.section-title Tin Tức
 		.swiper-news
@@ -181,7 +204,8 @@ section.section-news(data-aos="fade-up" data-aos-duration="1500")
 										span Xem thêm
 										img(src="./img/rightblack.png", alt="").black
 										img(src="./img/rightlinear.png", alt="").linear
-			.swiper-pagination
+			.bullet-pagination
+				.swiper-pagination
 section.section-registration
 	.fade-bg
 	.container
@@ -197,7 +221,7 @@ section.section-registration
 				.frm-btn
 					input(type="submit", value="")
 		.wrap-content
-			em.mdi.mdi-phone
+			em.ri-phone-line
 			span 0946 60 85 85
 
 
