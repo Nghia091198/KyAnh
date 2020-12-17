@@ -119,8 +119,8 @@
 				transition: .2s all ease-in-out
 				background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 				&:before
-					content: "\F040D"
-					font: normal normal normal 24px/1 "Material Design Icons"
+					content: "\f00b"
+					font-family: "remixicon"
 					font-size: 60px
 					top: 50%
 					left: 50%
@@ -439,9 +439,11 @@
 					position: absolute
 					width: 75px
 					height: 75px
+					border-radius: 100%
+					border: 5px solid white
 					&:before
-						content: "\F040D"
-						font: normal normal normal 24px/1 "Material Design Icons"
+						content: "\f00b"
+						font-family: "remixicon"
 						font-size: 60px
 						top: 50%
 						left: 50%
@@ -451,6 +453,7 @@
 				&:hover
 					.play
 						border-radius: 50%
+						border: unset
 						background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 .section-news
 	padding: 50/16*1rem 0 120/16*1rem
@@ -582,6 +585,8 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		@media screen and ( max-width: 1023.9px )
+			display: block
 		.frm-btnwrap
 			.frm-btn
 				position: relative

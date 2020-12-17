@@ -339,11 +339,11 @@ header
 			color: white
 		.item
 			position: relative
-			&::before
-				content: "\F0140"
+			em
+				// content: "\ea50"
 				position: absolute
-				font: normal normal normal 24px/1 "Material Design Icons"
-				right: -18px
+				font-family: "remixicon"
+				// right: -18px
 				top: 50%
 				transform: translateY(-50%)
 				font-size: 18px
@@ -361,7 +361,8 @@ header
 			.dropdown
 				display: flex
 			.item
-				&::before
-					transform: rotate(180deg)
+				em
+					top: 50%
+					transform: translateY(-50%) rotate(-180deg)
 					transition: .25s all ease-in-out
-					top: 0
+					
