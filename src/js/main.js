@@ -1,64 +1,17 @@
 function changeNav() {
     if ($("body").hasClass("homepage")) {
-        $('.header-2').hide();
         $(window).scroll(function() {
             if ($(document).scrollTop() >= 100) {
-                $(".header-1").hide();
-                $('.header-2').fadeIn('slow');
-                $("header").addClass("scroll-nav");
-                $(".header-bottom").appendTo(".header-2");
-                $(".header-right").appendTo(".header-2");
-                $(".header-right").appendTo(".header-2");
-                $(".toggle-menu span").css({ "background-color": "#06c" });
-                let mainMenu2 = $("header .header-2 .header-right").mapping({
-                    mobileWrapper: "header .mobile-wrap .primary-menu",
-                    mobileMethod: "appendTo",
-                    breakpoint: 1200,
-                });
-                let mainMenu4 = $("header .mobile-wrap").mapping({
-                    mobileWrapper: "header .header-2",
-                    mobileMethod: "appendTo",
-                    breakpoint: 1200,
-                });
-            } else {
-                $(".header-1").fadeIn('slow');
-                $('.header-2').hide();
-                $("header").removeClass("scroll-nav");
-                $(".header-bottom").appendTo(".header-1");
-                $(".header-right").appendTo(".header-1 .header-about");
-                $(".toggle-menu span").css({ "background-color": "white" });
-                let mainMenu3 = $("header .header-1 .header-right").mapping({
-                    mobileWrapper: "header .mobile-wrap .primary-menu",
-                    mobileMethod: "appendTo",
-                    breakpoint: 1200,
-                });
-                let mainMenu4 = $("header .mobile-wrap").mapping({
-                    mobileWrapper: "header .container",
-                    mobileMethod: "appendTo",
-                    breakpoint: 1200,
-                });
-            };
-        });
-    } else {
-        $("header .header-1").css({ "display": "none" });
-        $("header").addClass("scroll-nav");
-        $(".toggle-menu span").css({ "background-color": "#036" });
-        $(".header-bottom").appendTo(".header-2");
-        $(".header-right").appendTo(".header-2");
-        let mainMenu7 = $("header .header-right").mapping({
-            mobileWrapper: "header .primary-menu",
-            mobileMethod: "appendTo",
-            desktopWrapper: ".header-2",
-            desktopMethod: "appendTo",
-            breakpoint: 1200,
-        });
-        let mainMenu8 = $("header .mobile-wrap").mapping({
-            mobileWrapper: "header .header-2",
-            mobileMethod: "appendTo",
-            breakpoint: 1200,
-        });
+                $("header").addClass("active");
+             }
+             else {
+                  $("header").removeClass("active");
+             }
+         });
+     }  
+     else {
+        $("header").addClass("active");
     }
-
 }
 
 function mappingMenu() {
@@ -67,15 +20,22 @@ function mappingMenu() {
         mobileMethod: "appendTo",
         desktopWrapper: "header .header-bottom",
         desktopMethod: "appendTo",
-        breakpoint: 1200,
+        breakpoint: 1300,
     });
-    let mainNav = $("header .header-about .header-right").mapping({
-        mobileWrapper: "header .mobile-wrap .primary-menu",
+    let searchBox = $("header .header-1 .header-right").mapping({
+        mobileWrapper: ".primary-menu",
         mobileMethod: "appendTo",
-        desktopWrapper: "header .header-about",
-        desktopMethod: "appendTo",
-        breakpoint: 1024,
+        desktopWrapper: "header .header-1",
+        desktopMethod: "prependTo",
+        breakpoint: 1300,
     });
+    // let mainNav = $("header .header-about .header-right").mapping({
+    //     mobileWrapper: "header .mobile-wrap .primary-menu",
+    //     mobileMethod: "appendTo",
+    //     desktopWrapper: "header .header-about",
+    //     desktopMethod: "appendTo",
+    //     breakpoint: 1024,
+    // });
 }
 
 function menuMobile() {
@@ -120,6 +80,7 @@ function swiperInit() {
         loop: true,
         observeParents: true,
         observer: true,
+        clickable: true,
         autoplay: {
             delay: 5000,
         },
