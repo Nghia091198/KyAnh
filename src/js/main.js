@@ -115,25 +115,27 @@ function search() {
 }
 
 function swiperInit() {
-    // var bannerHome = new Swiper(".banner-home .swiper-container", {
-    //     slidesPerView: 1,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 5000,
-    //     },
-    //     speed: 300,
-    //     // slidesPerColumn: 2,
-    //     // spaceBetween: 30,
-    //     slidesPerColumnFill: "row",
-    //     pagination: {
-    //         el: ".banner-home .swiper-pagination",
-    //         clickable: true,
-    //     },
-    //     navigation: {
-    //         nextEl: ".banner-home .button-next",
-    //         prevEl: ".banner-home .button-prev",
-    //     },
-    // });
+    var bannerHome = new Swiper(".banner-home .swiper-container", {
+        slidesPerView: 1,
+        loop: true,
+        observeParents: true,
+        observer: true,
+        autoplay: {
+            delay: 5000,
+        },
+        speed: 1130,
+        // slidesPerColumn: 2,
+        // spaceBetween: 30,
+        slidesPerColumnFill: "row",
+        // pagination: {
+        //     el: ".banner-home .swiper-pagination",
+        //     clickable: true,
+        // },
+        // navigation: {
+        //     nextEl: ".banner-home .button-next",
+        //     prevEl: ".banner-home .button-prev",
+        // },
+    });
 
     // var home3Thumbs = new Swiper(
     //     ".sabeco-home-3 .main-slide-thumbs .swiper-container", {
@@ -541,7 +543,7 @@ function scrollToTop() {
         }
     });
     $('#backToTop').click(function() {
-        $("html, body").animate({ scrollTop: 0 }, 600);
+        $("html, body").animate({ scrollTop: 0 }, 1000);
         return false;
     });
 }
