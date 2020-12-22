@@ -1,9 +1,9 @@
 header
-	// background-color: rgba(#ffffff,0.75)
 	color: #ffffff
 	padding-top: 15px
 	position: fixed
 	z-index: 9999
+	background-color: unset
 	width: 100%
 	left: 0
 	right: 0
@@ -14,6 +14,20 @@ header
 	margin-left: auto
 	margin-right: auto
 	transition: .4s all ease-in-out
+	.header-1
+		position: relative
+		.dropdown
+			.title *
+				&:hover
+					color: #0c59b4
+	.header-left-2
+		display: none
+		.logo
+			width: 100%
+			height: 100%
+			img
+				width: 60px
+				height: 50px
 	.language
 		&:hover
 			*
@@ -22,46 +36,11 @@ header
 			background-color: rgb(102, 204, 255)!important
 			a
 				color: white!important
-	&.active
-		background-color: white
-		transition: .4s all ease-in-out
-	&.scroll-nav
-		background-color: white
-		box-shadow: 0 0 6px rgba(0,0,0,.3)
-		height: 70px
-		padding-top: 0
-		.header-2
-			padding-top: 10px
-			display: flex
-			.header-bottom
-				padding-left: 1rem
-			.header-right
-				@media screen and ( min-width: 1200.1px )
-					margin-left: auto
-			.primary-menu
-				.title
-					a
-						color: #333333
-						font-size: 14px
-					&:hover
-						a
-							color: #3366cc
-				&.active
-					top: 69px
-			.language
-				*
-					color: #333333
-					font-size: 14px
-		.logo
-			display: block
-			width: 60px
-			height: 50px
-			img
-				width: 100%
-				height: 100%
+	.header-right
+		display: flex
+		justify-content: flex-end
 	.header-about
 		display: flex
-		position: relative
 		justify-content: flex-end
 		@media screen and ( max-width: 1200px )
 			justify-content: flex-start
@@ -70,6 +49,7 @@ header
 			height: 120px
 			width: 120px
 			left: 0
+			top: 0
 			@media screen and ( max-width: 1200px )
 				left: 50%
 				transform: translateX(-50%)
@@ -88,7 +68,7 @@ header
 	display: flex
 	justify-content: flex-start
 	padding-top: 15px
-	@media screen and ( max-width: 1200px )
+	@media screen and ( max-width: 1300px )
 		position: fixed
 		right: 0
 		top: -100%
@@ -100,14 +80,17 @@ header
 	ul
 		display: flex
 		list-style-type: none
-		@media screen and ( max-width: 1200px )
+		@media screen and ( max-width: 1300px )
 			flex-direction: column
 			width: 100%
 			align-items: center
 			padding-left: 0
+		>li .title
+			&:hover *
+				color: #0c59b4
 		li
 			margin-right: 25/16*1rem
-			@media screen and ( max-width: 1200px )
+			@media screen and ( max-width: 1300px )
 				margin-right: 0
 			&:last-child
 				margin-right: 0
@@ -117,7 +100,7 @@ header
 					font-size: 16px
 					color: white
 					text-transform: uppercase
-					@media screen and ( max-width: 1200px )
+					@media screen and ( max-width: 1300px )
 						font-size: 22/16*1rem
 						margin-bottom: 20/16*1rem
 			.sub-menu
@@ -134,7 +117,7 @@ header
 				box-shadow: 0 0 5px 0 black
 				padding-left: 0
 				transition: .3s all ease-in-out
-				@media screen and ( max-width: 1200px )
+				@media screen and ( max-width: 1300px )
 					display: none
 				li
 					color: black
@@ -157,7 +140,7 @@ header
 						visibility: visible
 						transition: .3s all ease-in-out
 						top: 150%
-		@media screen and ( max-width: 1200px )
+		@media screen and ( max-width: 1300px )
 			.mobile-wrap
 				position: fixed
 				right: 0
@@ -176,14 +159,14 @@ header
 			.title
 				a
 					color: #333333
-					&:hover
-						color: #06c
+					
+	
 
 .toggle-menu
-	@media screen and ( min-width: 1200.1px )
+	@media screen and ( min-width: 1300.1px )
 		display: none
 	width: 30px
-	height: 30px
+	height: 25px
 	padding: 0
 	cursor: pointer
 	position: absolute
@@ -365,4 +348,55 @@ header
 					top: 50%
 					transform: translateY(-50%) rotate(-180deg)
 					transition: .25s all ease-in-out
-					
+
+header
+	&.active
+		height: 70px
+		background-color: white
+		transition: .3s all ease-in-out
+		box-shadow: 0 0 6px rgba(0,0,0,.3)
+		.header-left-2
+			display: block
+		.header-left
+			display: none
+		.header-1
+			display: flex
+			.header-bottom
+				padding-left: r(30px)
+				.primary-menu
+					*
+						color: #333333
+					li
+						&:hover
+							.title *
+								color: #0c59b4
+				.dropdown
+					.sub-menu
+						li
+							&:hover
+								*
+									color: white
+
+			.header-top
+				padding-top: 0
+				.language
+					*
+						color: #333333
+			.header-right
+				order: 1
+				padding-left: r(40px)
+		.primary-menu
+			ul
+				padding-left: 0
+				li 
+					*
+						font-size: 14px
+		.toggle-menu
+			span
+				background-color: #0c59b4
+		.primary-menu.active
+			top: 69px
+			height: 100vh
+	@media screen and (max-width: 1300px)
+		top: 0
+		// position: relative
