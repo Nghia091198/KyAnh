@@ -127,6 +127,7 @@
 					</div>
 				</footer>
 				<div id="fb-root"></div>
+				<div class="overlay"></div>
 			</div>
 			<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 				<div class="row">

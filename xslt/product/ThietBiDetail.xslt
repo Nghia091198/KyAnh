@@ -79,7 +79,7 @@
         </section>
         <div class="block-2_cosmetic-detail">
             <div class="container">
-                <div class="section-title">Mỹ phẩm khác</div>
+                <div class="section-title">Thiết bị thẩm Mỹ khác</div>
                 <div class="swiper-devices">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
