@@ -5,20 +5,40 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/NewsList">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="bg-about" setBackground="/Data/Sites/1/skins/default/img/home/logo.png">
-                    <div class="section-title text-left">về chúng tôi</div>
-                    <div class="content text-left">Công ty chuyên phân phối các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,…… (các dòng máy phong phú đa dạng phù hợp nhu cầu của từng khách hàng). Phân phối và thay thế linh kiện, phụ kiện máy chính hãng.Quy trình làm việc nhanh chóng giúp giảm thiểu tổn thất cho khách hàng. Tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành.</div>
-                    <a class="btn gradient-border" href="">xem thêm
-                                
-                        <em class="ri-add-line"></em>
-                    </a>
+            <xsl:apply-templates select="News"></xsl:apply-templates>
+        </div>
+    </xsl:template>
+    <xsl:template match="News">
+        <div class="col-lg-6 col-md-12">
+            <div class="bg-about" setBackground="/Data/Sites/1/skins/default/img/home/logo.png">
+                <div class="section-title text-left">
+                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                 </div>
+                <div class="content text-left">
+                    <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+                </div>
+                <a class="btn gradient-border">
+                    <xsl:attribute name="href">
+                        <xsl:text disable-output-escaping="yes">/gioi-thieu</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:text disable-output-escaping="yes">xem thêm</xsl:text>
+                    <em class="ri-add-line"></em>
+                </a>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="img">
-                    <img class="lazyloaded" src="./img/home/2.png" alt=""/>
-                </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="img">
+                <img class="lazyload">
+                    <xsl:attribute name="data-src">
+                        <xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                </img>
             </div>
         </div>
     </xsl:template>

@@ -149,7 +149,17 @@
         </li>
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="Content">
-        <div class="tab-item active" id="fruit-detail-tab-1">
+        <div class="tab-item" id="fruit-detail-tab-1">
+            <xsl:if test="position() = 1">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:attribute name="id">
                 <xsl:text disable-output-escaping="yes">fruit-detail-tab-</xsl:text>
                 <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>

@@ -23,7 +23,7 @@
                             <xsl:text disable-output-escaping="yes">Images</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="href">
-                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
                         </xsl:attribute>
                         <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
@@ -55,7 +55,7 @@
                         <xsl:text disable-output-escaping="yes">Images</xsl:text>
                     </xsl:attribute>
                     <xsl:attribute name="href">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
                     </xsl:attribute>
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
