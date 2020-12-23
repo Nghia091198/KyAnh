@@ -43,7 +43,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
                         <div class="button-box">
                             <a class="hotline" href="#">Hotline</a>
-                            <a class="contact" href="#">Liên hệ</a>
+                            <a class="contact" href="javacript:">Liên hệ</a>
                         </div>
                         <div class="icon-box">
                             <a class="ri-facebook-box-fill">
