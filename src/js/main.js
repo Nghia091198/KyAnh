@@ -531,13 +531,11 @@ function tabActive() {
         }
     });
 }
-
-window.onload = function() {
-    $(".block-2_cosmetic-detail .overlay, .block-2_cosmetic-detail .modal").addClass('active');
-};
-$('.block-2_cosmetic-detail .overlay, .close').click(function() {
-    $('.block-2_cosmetic-detail .overlay, .block-2_cosmetic-detail .modal').toggleClass("active");
-});
+function toggleModal() {
+    $('.contact, .overlay, .close').on('click', function(){
+        $('.overlay, .modal').toggleClass("active");
+    });
+}
 
 function pageBanner() {
     var pageBanner = new Swiper(".pages-banner .swiper-container", {
@@ -614,5 +612,6 @@ $(document).ready(function() {
     scrollToTop();
     // selectDis();
     tabActive();
+    toggleModal();
     // AOS.init();
 });

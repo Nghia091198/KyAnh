@@ -41,30 +41,37 @@ section.block_cosmetic-detail
                     .price-box
                         .price 2.959.000 vnđ
                         .cost 3.285.000 vnđ
-                    .content-box
-                        .title SKU
-                        .content 5312839334306
-                .wraper-cosmetic
-                    .content-box
-                        .title Thương hiệu
-                        .content Carecella
-                .wraper-cosmetic
-                    .content-box
-                        .title Xuất xứ
-                        .content Hàn Quốc
-                .wraper-cosmetic
-                    .content-box
-                        .title Hạn sử dụng
-                        .content Ghi bên ngoài hộp
-                .wraper-cosmetic
-                    .content-box
-                        .title SET
-                        .content
-                            p Carecella Venus Peel Serum (2.5ml x 20ea)
-                            p Carecella Venus Peel Powder (0.7g x 10ea)
+                .table-pro-detail
+                    table
+                        tbody
+                            tr
+                                th(scope='row') SKU
+                                |
+                                td 5312839334306
+                            |
+                            tr
+                                th(scope='row') Thương hiệu
+                                |
+                                td Carecella
+                            |
+                            tr
+                                th(scope='row') Xuất xứ
+                                |
+                                td Hàn Quốc
+                            |
+                            tr
+                                th(scope='row') Hạn sử dụng
+                                |
+                                td Ghi bên ngoài hộp
+                            tr
+                                th(scope='row') SET
+                                |
+                                td 
+                                    p Carecella Venus Peel Serum (2.5ml x 20ea)
+                                    p Carecella Venus Peel Serum (2.5ml x 20ea)
                 .button-box
                     a(href="#").hotline Hotline
-                    a(href="#").contact Liên hệ
+                    a(href="javascript:").contact Liên hệ
                 .icon-box
                     a(href="#").ri-facebook-box-fill
                     a(href="#").ri-twitter-fill
@@ -127,15 +134,20 @@ section.block_cosmetic-detail
         .wrap-form
             .row
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-12
-                    textarea#inpputTextArea.form-control(rows='6',placeholder="Nội dung")
-            .form-btnwrap
-                .form-btn
+                    .form-group
+                        textarea#inpputTextArea.form-control(placeholder="Nội dung")
+            .frm-btnwrap
+                .frm-btn
                     input(type="submit" value ="GỬI")

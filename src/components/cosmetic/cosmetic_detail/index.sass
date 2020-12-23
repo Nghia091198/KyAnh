@@ -68,9 +68,24 @@
                         object-fit: cover
                 .swiper-slide-thumb-active
                     border: 1px solid #0c59b4
+    .table-pro-detail
+        table
+            width: 100%
+            tr
+                border-bottom: 1px solid #e0e0e0
+                th
+                    width: 30%
+                    font-size: r(16px)
+                    color: #666666
+                    font-weight: 700
+                td
+                    font-size: r(16px)
+                    height: 45px
+                &:last-child
+                    td
+                        padding: r(12px) 0
     .wraper-cosmetic
         padding-bottom: r(10px)
-        border-bottom: 1px solid #e0e0e0
         .name-cosmetic
             h1
                 font-size: r(24px)
@@ -88,16 +103,6 @@
                 font-size: r(16px)
                 color: #999999
                 text-decoration: line-through
-        .content-box
-            display: flex
-            padding-top: r(10px)
-            .title
-                color: #666666
-                font-weight: 700
-                width: r(130px)
-                font-size: r(16px)
-            .content
-                font-size: r(16px)
     .button-box
         display: flex
         padding-top: r(15px)
@@ -256,83 +261,4 @@
                 background-image: linear-gradient(to bottom, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
                 color: white
                 border-top: 1px solid #3399ff
-    .overlay
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        z-index: 10
-        background-color: rgba(0,0,0,0.5)
-        visibility: hidden
-        opacity: 0
-        &.active
-            visibility: visible
-            opacity: 1
-    .modal
-        width: r(600px)
-        height: r(470px)
-        background: #ffffff
-        position: fixed
-        padding: r(40px)
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        z-index: 10
-        visibility: hidden
-        opacity: 0
-        &.active
-            visibility: visible
-            opacity: 1
-        .close
-            position: absolute
-            top: 0
-            right: 0
-            background: transparent
-            color: #0c59b4
-            cursor: pointer
-            border: 0
-            font-size: r(30px)
-            padding: 5px
-        .title
-            font-size: r(24px)
-            color: #0c59b4
-            font-weight: 700
-        .wrap-form
-            margin-top: r(20px)
-            .form-control
-                width: 100%
-                border: 0
-                background-color: #f3f3f3
-                border-radius: 5px 
-                font-size: r(16px)
-                margin-bottom: r(20px)
-                padding-left: r(20px)
-                border: 1px solid transparent
-                color: #1974d2
-                &:focus
-                    outline: none
-                    border: 1px solid #1974d2
-            input
-                height: r(40px)
-            textarea
-                padding-top: r(15px)
-            .form-btnwrap
-                .form-btn
-                    input
-                        width: r(200px)
-                        height: r(50px)
-                        cursor: pointer
-                        font-size: 16px
-                        font-weight: 400
-                        text-align: center
-                        border-radius: 50px
-                        background-color: transparent
-                        border: 1px solid #1974d2
-                        color: #1974d2
-                        &:hover
-                            color: white
-                            border: 1px solid transparent
-                            background-color: #1974d2
-                            background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 
