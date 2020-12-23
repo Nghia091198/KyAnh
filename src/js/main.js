@@ -29,13 +29,6 @@ function mappingMenu() {
         desktopMethod: "prependTo",
         breakpoint: 1300,
     });
-    // let mainNav = $("header .header-about .header-right").mapping({
-    //     mobileWrapper: "header .mobile-wrap .primary-menu",
-    //     mobileMethod: "appendTo",
-    //     desktopWrapper: "header .header-about",
-    //     desktopMethod: "appendTo",
-    //     breakpoint: 1024,
-    // });
 }
 
 function menuMobile() {
