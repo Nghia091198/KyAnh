@@ -11,7 +11,7 @@
                     <xsl:apply-templates select="New[position() &gt;1 and position() &lt;4]" mode="Big1"></xsl:apply-templates>
                 </div>
             </div>
-            <xsl:apply-templates select="News" mode="Small"></xsl:apply-templates>
+            <xsl:apply-templates select="News[position() &gt;3]" mode="Small"></xsl:apply-templates>
         </div>
     </xsl:template>
     <xsl:template match="News" mode="Big">
