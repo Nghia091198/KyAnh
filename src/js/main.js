@@ -22,7 +22,7 @@ function mappingMenu() {
         desktopMethod: "appendTo",
         breakpoint: 1300,
     });
-    let searchBox = $("header .header-1 .header-right").mapping({
+    let searchBox = $("header .header-1 .header-top").mapping({
         mobileWrapper: ".primary-menu",
         mobileMethod: "appendTo",
         desktopWrapper: "header .header-1",
