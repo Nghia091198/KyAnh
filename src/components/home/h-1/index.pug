@@ -1,12 +1,13 @@
 section.section-about
 	.container
 		.row
-			.col-lg-6.col-md-12
+			.col-lg-6.col-md-12.position-relative
 				.bg-about
-				.section-title.text-left về chúng tôi
-				.content.text-left Công ty chuyên phân phối các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,…… (các dòng máy phong phú đa dạng phù hợp nhu cầu của từng khách hàng). Phân phối và thay thế linh kiện, phụ kiện máy chính hãng.Quy trình làm việc nhanh chóng giúp giảm thiểu tổn thất cho khách hàng. Tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành.
-				a(href="").btn.gradient-border xem thêm
-					em.ri-add-line
+				.wrap-content
+					.section-title.text-left về chúng tôi
+					.content.text-left Công ty chuyên phân phối các dòng thiết bị thẩm mỹ công nghệ cao chính hãng từ các nước như: Hàn, Mỹ, Đức, Nhật, Trung Quốc,…… (các dòng máy phong phú đa dạng phù hợp nhu cầu của từng khách hàng). Phân phối và thay thế linh kiện, phụ kiện máy chính hãng.Quy trình làm việc nhanh chóng giúp giảm thiểu tổn thất cho khách hàng. Tư vấn tận tâm, dịch vụ toàn quốc, nhận phân phối, sửa chữa tận nơi tại các tỉnh thành.
+					a(href="").btn.gradient-border xem thêm
+						em.ri-add-line
 			.col-lg-6.col-md-12
 				.img
 					img(src="./img/home/2.png", alt="").lazyloaded
@@ -53,17 +54,14 @@ section.section-timerepair
 section.section-why
 	.container
 		.section-title TẠI SAO CHỌN KỲ ANH TECH
-		.swiper-why
-			.swiper-container
-				.swiper-wrapper
-					-for(i=0;i<5;i++)
-						.swiper-slide
-							.why-item
-								.why-img
-									img(src="./img/home/8.png", alt="").swiper-lazy.swiper-lazy-loaded
-								.why-content
-									span.blue Hơn 10 năm 
-									span kinh nghiệm trong ngành
+		.wrap-why
+			-for(i=0;i<5;i++)
+				.why-item
+					.why-img
+						img(src="./img/home/8.png", alt="").swiper-lazy.swiper-lazy-loaded
+					.why-content
+						span.blue Hơn 10 năm 
+						span kinh nghiệm trong ngành
 section.section-devices
 	.container
 		.section-title Mỹ Phẩm

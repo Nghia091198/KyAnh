@@ -2,8 +2,20 @@
 	padding-top: 80/16*1rem
 	@media screen and ( max-width: 1024px )
 		text-align: center
+	.position-relative
+		position: relative
+		overflow: hidden
 	.bg-about
-		// background: url('../img/home/3.png')100% 100% no-repeat
+		position: absolute
+		background: url('../img/home/bg4.jpg') no-repeat
+		background-size: 100% 
+		height: 100%
+		width: 100%
+		top: 0
+		transform: scaleY(1.3)
+		z-index: -1
+	.wrap-content
+		z-index: 5
 	.section-title
 		margin-bottom: r(20px)
 		@media screen and ( max-width: 1023.9px )
@@ -233,8 +245,27 @@
 	background: url("../img/home/bg.png")
 	height: 430px
 	padding: 65/16*1rem 0 85/16*1rem
+	@media screen and ( max-width: 1023.9px )
+		height: auto
 	.section-title
 		margin-bottom: 45/16*1rem
+	.wrap-why
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 1023.9px )
+			flex-wrap: wrap
+			justify-content: center
+			.why-item
+				margin: 0 r(25px) 
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+		@media screen and ( max-width: 767.9px )
+			.why-item
+				width: 30%
+		@media screen and ( max-width: 400px )
+			.why-item
+				width: 100%
 	.why-item
 		.why-img
 			display: flex

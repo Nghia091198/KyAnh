@@ -49,25 +49,25 @@
 	100%
 		color: white
 .banner-home
-	max-height: 1080px
 	margin-top: -120/16*1rem
 	position: relative
 	.img
 		width: 100%
-		max-height: 1080px
 		overflow: hidden
 		position: relative
+		height: calc( 100vh + 120/16*1rem)
 		img
 			width: 100%
-			height: max-content
+			height: 100%
 			object-fit: cover
 		&::after
 			left: 0
 			content: ""
 			position: absolute
 			top: 0
+			bottom: 0
 			width: 100%
-			height: 100%
+			height: calc( 100vh + 120/16*1rem )
 			background-color: rgba(0,0,0,0.3)
 			z-index: 2
 	.banner-content

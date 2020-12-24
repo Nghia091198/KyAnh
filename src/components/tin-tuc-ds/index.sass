@@ -6,6 +6,7 @@
         .item
             box-shadow: 0 0 6px rgba(0,0,0,.3)
             height: 100%
+            cursor: pointer
             &:hover
                 box-shadow: 0 0 6px rgba(0,0,0,.3)
                 .seemore
@@ -15,10 +16,11 @@
                         background-clip: text
                         color: transparent
                 .title
-                    background: linear-gradient(90deg,#0064cc 0,#0064cc 1%,#40c3f7)
-                    -webkit-background-clip: text!important
-                    background-clip: text
-                    color: transparent
+                    *
+                        background: linear-gradient(90deg,#0064cc 0,#0064cc 1%,#40c3f7)
+                        -webkit-background-clip: text!important
+                        background-clip: text
+                        color: transparent
                         
             &.lg-item
                 display: flex

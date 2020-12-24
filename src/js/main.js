@@ -126,7 +126,7 @@ function swiperInit() {
             prevEl: ".swiper-devices .button-prev",
         },
         breakpoints: {
-            460: {
+            400: {
                 spaceBetween: 10,
                 slidesPerView: 2,
                 centeredSlides: false,
@@ -156,9 +156,9 @@ function swiperInit() {
             prevEl: ".swiper-cosmetic .button-prev",
         },
         breakpoints: {
-            460: {
+            400: {
                 spaceBetween: 10,
-                slidesPerView: 1,
+                slidesPerView: 2,
                 centeredSlides: false,
             },
             768: {
@@ -595,6 +595,12 @@ const selectDis = () => {
     });
 };
 
+function slide() {
+    $(".option-header").click(function(){
+        $(".option-body").slideToggle("slow");
+        $(".option-header em").toggleClass("down");
+    });
+}
 $(document).ready(function() {
 
     // setBackgroundElement();
@@ -610,5 +616,6 @@ $(document).ready(function() {
     // selectDis();
     tabActive();
     toggleModal();
+    slide();
     // AOS.init();
 });
