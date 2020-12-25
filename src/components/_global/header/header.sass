@@ -14,6 +14,8 @@ header
 	margin-left: auto
 	margin-right: auto
 	transition: .5s all ease-in-out
+	@media screen and ( max-width: 767.9px )
+		height: 80px
 	.header-1
 		position: relative
 		.dropdown
@@ -41,6 +43,8 @@ header
 			justify-content: flex-start
 	.header-bottom
 		display: flex
+		@media screen and ( max-width: 1300px )
+			justify-content: center
 		.header-left
 			margin-top: -50px
 			@media screen and ( max-width: 1300px )
@@ -48,20 +52,22 @@ header
 			a
 				img
 					filter: brightness(0) invert(1)
+					@media screen and ( max-width: 767.9px )
+						width: 60px
+						height: 60px
+	.mobile-wrap.active
+		top: 120px
+		@media screen and ( max-width: 767.9px )
+			top: 80px
 
 .primary-menu
 	display: flex
 	justify-content: flex-start
 	padding-top: 15px
 	@media screen and ( max-width: 1300px )
-		position: fixed
-		right: 0
-		top: -100%
-		width: 100%
-		opacity: 0
-		visibility: hidden
-		transition: .3s all ease-in-out
-		transform: translateY(-70%)
+		display: flex
+		flex-direction: column
+		top: 120px
 	ul
 		display: flex
 		list-style-type: none
@@ -71,11 +77,14 @@ header
 			align-items: center
 			padding-left: 0
 		>li .title
+			color: white
 			&:hover *
 				color: #0c59b4
+			@media screen and ( max-width: 1300px )
+				color: #333333
+				text-align: center
 		li
 			margin-right: 25/16*1rem
-			transition: 1s all
 			@media screen and ( max-width: 1300px )
 				margin-right: 0
 			&:last-child
@@ -84,7 +93,6 @@ header
 				a
 					display: inline-block
 					font-size: 16px
-					color: white
 					text-transform: uppercase
 					@media screen and ( max-width: 1300px )
 						font-size: 22/16*1rem
@@ -127,25 +135,6 @@ header
 						transition: .3s all ease-in-out
 						top: 110%
 						overflow: hidden
-		@media screen and ( max-width: 1300px )
-			.mobile-wrap
-				position: fixed
-				right: 0
-				top: 120px
-	&.active
-		width: 100%
-		background-color: white
-		color: white
-		top: 120px
-		transform: translateY(0)
-		transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
-		opacity: 1
-		visibility: visible
-		height: 100%
-		.dropdown
-			.title
-				a
-					color: #333333
 					
 	
 
@@ -190,23 +179,21 @@ header
 				transform: rotate(-45deg)
 .mobile-wrap
 	opacity: 0
-	top: 0
+	position: fixed
+	right: 0
+	transform: translateX(100%)
 	transition: .3s all ease-in-out
+	background-color: white
+	height: 100vh
+	width: 320px
+	padding: r(30px) r(20px)
+	z-index: 50
 	&.active
+		pointer-events: auto
 		opacity: 1
-		top: 100%
-		transition: .3s all ease-in-out
-		.primary-menu
-			&.active
-				display: flex
-				flex-direction: column
-				// justify-content: center
-				align-items: center
-			.header-right
-				.header-top
-					.language
-						*
-							color: #333333
+		z-index: 0
+		transform: translateX(0)
+		transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
 .searchbox
 	background: white
 	position: fixed
@@ -305,6 +292,7 @@ header
 		position: relative
 		display: flex
 		align-items: center
+		margin-top: 15px
 		*
 			font-size: 12px
 			color: white
@@ -324,7 +312,7 @@ header
 			background-color: white
 			display: none
 			padding: 5px
-			top: 70%
+			top: 110%
 			span
 				color: #111111
 		&:hover
@@ -343,11 +331,8 @@ header
 		background-color: white
 		transition: .3s all ease-in-out
 		box-shadow: 0 0 6px rgba(0,0,0,.3)
-		// .header-left
-		// 	position: static
-		// 	width: 60px
-		// 	height: 50px
-		
+		.mobile-wrap.active
+			top: 70px
 		.header-1
 			display: flex
 			justify-content: space-between

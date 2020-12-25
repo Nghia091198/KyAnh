@@ -2,8 +2,20 @@
 	padding-top: 80/16*1rem
 	@media screen and ( max-width: 1024px )
 		text-align: center
+	.position-relative
+		position: relative
+		overflow: hidden
 	.bg-about
-		// background: url('../img/home/3.png')100% 100% no-repeat
+		position: absolute
+		background: url('../img/home/bg4.jpg') no-repeat
+		background-size: 100% 
+		height: 100%
+		width: 100%
+		top: 0
+		transform: scaleY(1.3)
+		z-index: -1
+	.wrap-content
+		z-index: 5
 	.section-title
 		margin-bottom: r(20px)
 		@media screen and ( max-width: 1023.9px )
@@ -59,8 +71,8 @@
 			position: absolute
 			top: 0
 			left: 0
-			width: 200px
-			height: 200px
+			width: 160px
+			height: 160px
 			border-radius: 0 0 181px
 			background-color: #ecfaff
 			z-index: -1
@@ -93,7 +105,7 @@
 			display: block
 		.img
 			width: 650px
-			height: 100%
+			height: 415px
 			justify-content: center
 			align-items: center
 			display: flex
@@ -102,9 +114,11 @@
 			@media screen and (max-width: 1299.9px)
 				width: auto
 				margin: 0 auto
+				height: auto
 			img
 				width: 100%
 				height: 100%
+				object-fit: cover
 			a
 				display: block
 				position: relative
@@ -137,8 +151,11 @@
 		.repair-content
 			border-radius: 15px
 			box-shadow: 9px 12px 30px rgba(0, 0, 0, 0.05)
-			background-image: linear-gradient(to top, #1379d6 0%, #1379d6 2%, #00adef 100%), linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
+			background: linear-gradient(to top, #1379d6 0%, #1379d6 2%, #00adef 100%), linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%),url("../img/bg.png") no-repeat
 			height: 340px
+			background-blend-mode: saturation
+			background-position-x: right
+			background-position-y: bottom
 			padding: 40/16*1rem
 			width: 630px
 			@media screen and (max-width: 1299.9px)
@@ -228,8 +245,27 @@
 	background: url("../img/home/bg.png")
 	height: 430px
 	padding: 65/16*1rem 0 85/16*1rem
+	@media screen and ( max-width: 1023.9px )
+		height: auto
 	.section-title
 		margin-bottom: 45/16*1rem
+	.wrap-why
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 1023.9px )
+			flex-wrap: wrap
+			justify-content: center
+			.why-item
+				margin: 0 r(25px) 
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+		@media screen and ( max-width: 767.9px )
+			.why-item
+				width: 30%
+		@media screen and ( max-width: 400px )
+			.why-item
+				width: 100%
 	.why-item
 		.why-img
 			display: flex
@@ -562,6 +598,8 @@
 			width: 50%
 		@media screen and ( max-width: 768px )
 			width: 100%
+	input[type="reset"]
+		display: none
 	.form-group
 		@media screen and ( max-width: 1023.9px )
 			width: 100%
@@ -579,7 +617,12 @@
 		align-items: center
 		@media screen and ( max-width: 1023.9px )
 			display: block
+		span
+			display: block!important
 		.frm-btnwrap
+			display: flex
+			label
+				display: none
 			.frm-btn
 				position: relative
 				height: 60px
@@ -598,12 +641,15 @@
 					transform: translateX(-50%)
 					font-family: "remixicon"
 					color: white
-					pointer-events: auto
+					pointer-events: none
 					cursor: pointer
 					font-size: 24px
+					z-index: 3
 				input[type="submit"]
-					width: 100%
-					height: 100%
+					font-size: 0
+					position: absolute
+					width: 60px
+					height: 60px
 					border-radius: 0 2px 2px 0
 					background-color: #54cbf6
 					background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)

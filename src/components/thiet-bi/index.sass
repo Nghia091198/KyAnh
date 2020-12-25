@@ -1,5 +1,10 @@
 .section-pagedevice.section-devices
     padding-bottom: 80/16*1rem
+    @media screen and ( max-width: 1023.9px )
+        .wrapper-sticky
+            position: sticky
+            top: 70px
+            z-index: 999
     .option
         width: 100%
         .option-header
@@ -11,11 +16,25 @@
             background-color: #1974d2
             padding: 20px
             font-size: 20px
+            justify-content: space-between
+            cursor: pointer
+            em
+                transform: rotate(0deg)
+                transition: .3s all ease-in-out
+                @media screen and ( min-width: 1024px )
+                    display: none
+                &.down
+                    transform: rotate(90deg)
+                    transition: .3s all ease-in-out
         .option-body
+            @media screen and ( min-width: 1024px )
+                display: block
+            display: none
             list-style: none
             padding-left: 0
             padding: 20px
             border: 1px solid #cccccc
+            background-color: white
             li
                 margin-bottom: 20/16*1rem
                 &:last-child
@@ -27,6 +46,9 @@
                     display: inline-block
                     &:hover
                         color: #0066cc
+                &.active
+                    *
+                        color:  #0066cc
     .section-title
         margin-bottom: 5px
         @media screen and ( max-width: 1023.9px )
@@ -51,8 +73,13 @@
                 height: 100%
                 object-fit: cover
         .title
-            padding: 20px
             overflow: hidden
+            *
+                display: flex
+                width: 100%
+                height: 100%
+                justify-content: center
+                align-items: center
         &::before
             width: 150px
             height: 150px
