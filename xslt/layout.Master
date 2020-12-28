@@ -42,22 +42,17 @@
 				<header>
 					<div class="container">
 						<div class="header-1">
-							<div class="header-about">
+							<div class="header-top">
+								<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
+								<div class="search"><em class="ri-search-line"></em></div>
+								<portal:ModuleWrapper ID="mdl141" runat="server" ConfigureModuleId="141" />
+							</div>
+							<div class="header-bottom">
 								<div class="header-left">
 									<portal:ModuleWrapper ID="mdl139" runat="server" ConfigureModuleId="139" />
 								</div>
-								<div class="header-right">
-									<div class="header-top">
-										<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
-										<div class="search"><em class="ri-search-line"></em></div>
-										<portal:ModuleWrapper ID="mdl141" runat="server" ConfigureModuleId="141" />
-									</div>
-								</div>
-							</div>
-							<div class="header-bottom">
 								<div class="primary-menu">
 									<portal:ModuleWrapper ID="mdl142" runat="server" ConfigureModuleId="142" />
-
 								</div>
 							</div>
 						</div>
@@ -69,6 +64,7 @@
 						<portal:ModuleWrapper ID="mdl147" runat="server" ConfigureModuleId="147" />
 					</div>
 				</header>
+
 				<main class="main">
 					<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
 						<asp:ContentPlaceHolder ID="altContent1" runat="server">
@@ -98,7 +94,7 @@
 						<div class="row">
 							<div class="col-lg-4 col-md-6 col-sm-12">
 								<portal:ModuleWrapper ID="mdl149" runat="server" ConfigureModuleId="149" />
-								
+
 							</div>
 							<div class="col-lg-3 col-md-6 col-7">
 								<portal:ModuleWrapper ID="mdl150" runat="server" ConfigureModuleId="150" />
@@ -128,6 +124,11 @@
 				</footer>
 				<div id="fb-root"></div>
 				<div class="overlay"></div>
+				<div class="modal">
+					<div class="close ri-close-line"></div>
+					<div class="title">Thông tin khách hàng</div>
+					<portal:ModuleWrapper ID="mdl181" runat="server" ConfigureModuleId="181" />
+				</div>
 			</div>
 			<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 				<div class="row">
@@ -207,7 +208,9 @@
 			], function () {
 			});
 		</script>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=592601277979782&autoLogAppEvents=1" nonce="RP0ZAR9M"></script>
+		<script async defer crossorigin="anonymous"
+			src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=592601277979782&autoLogAppEvents=1"
+			nonce="RP0ZAR9M"></script>
 	</body>
 
 	</html>

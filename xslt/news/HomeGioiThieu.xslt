@@ -13,6 +13,7 @@
             <div class="bg-about" setBackground="/Data/Sites/1/skins/default/img/home/logo.png">
                 <div class="section-title text-left">
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
                 <div class="content text-left">
                     <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>

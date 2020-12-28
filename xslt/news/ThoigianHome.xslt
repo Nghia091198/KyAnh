@@ -10,7 +10,7 @@
     </xsl:template>
     <xsl:template match="News">
         <div class="col-lg-3 col-md-6 col-sm-12">
-            <a class="timeto">
+            <div class="timeto">
                 <xsl:attribute name="href">
                     <xsl:text disable-output-escaping="yes">#</xsl:text>
                 </xsl:attribute>
@@ -19,11 +19,13 @@
                 </xsl:attribute>
                 <div class="time">
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					 <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
                 <div class="desc">
                     <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
                 </div>
-            </a>
+               
+            </div>
         </div>
     </xsl:template>
 </xsl:stylesheet>

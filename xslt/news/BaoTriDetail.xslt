@@ -12,6 +12,7 @@
                 <div class="container">
                     <div class="section-title">
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </div>
                     <div class="row">
                         <xsl:apply-templates select="News" mode="TrungTam"></xsl:apply-templates>
