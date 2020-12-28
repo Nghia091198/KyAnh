@@ -11,6 +11,7 @@
         .gallery-top
             position: relative
             width: 600px
+            padding-right: 1px
             @media screen and ( max-width: 576px )
                 width: 100%
             .swiper-slide
@@ -28,7 +29,7 @@
                 img
                     width: 100%
                     height: 100%
-                    object-fit: cover
+                    object-fit: contain
             .nav-prev,.nav-next
                 position: absolute
                 top: 45%
@@ -46,6 +47,9 @@
                 width: 100%
                 order: 2
                 margin-top: 20px
+            .img
+                width: 100%
+                height: 100%
             .swiper-wrapper
                 display: flex
                 justify-content: space-between
@@ -73,17 +77,16 @@
             width: 100%
             tr
                 border-bottom: 1px solid #e0e0e0
-                th
+                height: 50px
+                td:first-child
                     width: 30%
                     font-size: r(16px)
-                    color: #666666
                     font-weight: 700
+                &:first-child
+                    height: 40px
                 td
-                    font-size: r(16px)
-                    height: 45px
-                &:last-child
-                    td
-                        padding: r(12px) 0
+                    color: #666666
+                    font-weight: 500
     .wraper-cosmetic
         padding-bottom: r(10px)
         .name-cosmetic
@@ -184,6 +187,11 @@
                 &.active
                     display: block
         .fullcontent
+            overflow: hidden
+            max-height: 400px
+            &.active
+                max-height: max-content
+                transition: .5s all ease-in-out
             p
                 color: #333333
                 font-size: 1rem

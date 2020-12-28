@@ -37,37 +37,33 @@ section.block_cosmetic-detail
                 .wraper-cosmetic
                     .name-cosmetic
                         h1 Bột và Tinh Chất Tảo Vi Kim Sinh Học CareCella
+                .wraper-cosmetic
+                    .price-box
+                        .price 2.959.000 vnđ
+                        .cost 3.285.000 vnđ
                 .table-pro-detail
                     table
                         tbody
                             tr
-                                th(scope='row') SKU
-                                |
+                                td SKU
                                 td 5312839334306
-                            |
                             tr
-                                th(scope='row') Thương hiệu
-                                |
+                                td Thương hiệu
                                 td Carecella
-                            |
                             tr
-                                th(scope='row') Xuất xứ
-                                |
+                                td Xuất xứ
                                 td Hàn Quốc
-                            |
                             tr
-                                th(scope='row') Hạn sử dụng
-                                |
+                                td Hạn sử dụng
                                 td Ghi bên ngoài hộp
                             tr
-                                th(scope='row') SET
-                                |
+                                td SET
                                 td 
                                     p Carecella Venus Peel Serum (2.5ml x 20ea)
                                     p Carecella Venus Peel Serum (2.5ml x 20ea)
                 .button-box
                     a(href="#").hotline Hotline
-                    a(href="#").contact Liên hệ
+                    a(href="javascript:").contact Liên hệ
                 .icon-box
                     a(href="#").ri-facebook-box-fill
                     a(href="#").ri-twitter-fill
@@ -76,9 +72,11 @@ section.block_cosmetic-detail
                 .tab-description
                     ul.tab-navigation
                         li.active
-                            a(data-type='fruit-detail-tab-1') Thông tin chi tiết
+                            a(data-type='fruit-detail-tab-1') Mô tả nổi bật
                         li
-                            a(data-type='fruit-detail-tab-2') Thông số kỹ thuật
+                            a(data-type='fruit-detail-tab-2') Thành phần
+                        li
+                            a(data-type='fruit-detail-tab-3') Hướng dẫn sử dụng
                 .content-description
                     .tab-wrapper
                         .tab-item.active#fruit-detail-tab-1
@@ -90,12 +88,30 @@ section.block_cosmetic-detail
                                 p Thu nhỏ lỗ chân lông
                                 p Tăng sự thẩm thấu các dưỡng chất nuôi dưỡng tế bào biểu bì
                                 strong Công dụng
+                                p Bộ sản phẩm bao gồm: bột CareCella và Serum CareCella
+                                p Mang đến làn da trắng sáng, mềm mịn
+                                p Cải thiện độ đàn hồi của da
+                                p Cải thiện sắc tố da
+                                p Thu nhỏ lỗ chân lông
+                                p Tăng sự thẩm thấu các dưỡng chất nuôi dưỡng tế bào biểu bì
+                                strong Công dụng
+                                p Bộ sản phẩm bao gồm: bột CareCella và Serum CareCella
+                                p Mang đến làn da trắng sáng, mềm mịn
+                                p Cải thiện độ đàn hồi của da
+                                p Cải thiện sắc tố da
+                                p Thu nhỏ lỗ chân lông
+                                p Tăng sự thẩm thấu các dưỡng chất nuôi dưỡng tế bào biểu bì
+                                strong Công dụng
                             .readmore
-                                a(href="") Xem thêm
+                                button Xem Thêm
                                 em.ri-arrow-drop-down-line
-                        .tab-item.active#fruit-detail-tab-2
+                        .tab-item#fruit-detail-tab-2
                             .fullcontent
-                        .tab-item.active#fruit-detail-tab-3
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis iusto, quaerat corporis repellendus officia numquam cupiditate quisquam accusantium quo laboriosam nihil aspernatur alias, adipisci mollitia possimus natus dignissimos beatae ratione.
+                            .readmore
+                                button Xem Thêm
+                                em.ri-arrow-drop-down-line
+                        .tab-item#fruit-detail-tab-3
                             .fullcontent
                                 p Bộ sản phẩm bao gồm: bột CareCella và Serum CareCella
                                 p Mang đến làn da trắng sáng, mềm mịn
@@ -104,9 +120,12 @@ section.block_cosmetic-detail
                                 p Thu nhỏ lỗ chân lông
                                 p Tăng sự thẩm thấu các dưỡng chất nuôi dưỡng tế bào biểu bì
                                 strong Công dụng
+                            .readmore
+                                button Xem Thêm
+                                em.ri-arrow-drop-down-line
 .block-2_cosmetic-detail
     .container
-        .section-title Thiết bị thẩm mỹ khác
+        .section-title Thiết bị khác
         .swiper-devices
             .swiper-container
                 .swiper-wrapper
@@ -128,15 +147,20 @@ section.block_cosmetic-detail
         .wrap-form
             .row
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-6
-                    input.form-control(type='text', placeholder="Họ và tên")
+                    .form-group
+                        input.form-control(type='text', placeholder="Họ và tên")
                 .col-lg-12
-                    textarea#inpputTextArea.form-control(rows='6',placeholder="Nội dung")
-            .form-btnwrap
-                .form-btn
+                    .form-group
+                        textarea#inpputTextArea.form-control(placeholder="Nội dung")
+            .frm-btnwrap
+                .frm-btn
                     input(type="submit" value ="GỬI")

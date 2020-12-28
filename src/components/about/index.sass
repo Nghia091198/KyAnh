@@ -3,7 +3,11 @@
     .section-title
         margin-bottom: r(25px)
     .content_about-us
+        dislay: flex
+        flex-direction: column
+        justify-content: center
         p
+            line-height: 1.5
             margin-bottom: r(25px)
     .item-img
         position: relative
@@ -28,6 +32,7 @@
             left: 50%
             z-index: 5
             transform: translate(-50%,-50%)
+            transition: .3s all
             &:before
                 content: "\f00b"
                 font-family: "remixicon"
@@ -47,6 +52,7 @@
                 position: absolute
         &:hover
             .play
+                transition: .3s all
                 background-image: linear-gradient(to top, #3195fc 0%, #3195fc 2%, #40c3f7 100%)
 .block_about-2
     padding: r(50px) 0

@@ -516,15 +516,21 @@ function tabActive() {
             .addClass("active");
 
         var display = $(this).attr("data-type");
+        
         $(".tab-item").removeClass("active");
         $("#" + display).addClass("active");
-
         let maxHeight = 400;
         let contentTab = $(".tab-wrapper .tab-item.active");
-        // console.log(contentTab.height())
         if (contentTab.height() < maxHeight) {
-            $(contentTab).find('.btn-view-more').hide()
+            $(contentTab).find('.readmore').hide();
         }
+        else {
+            $(contentTab).find('.readmore').show();
+        }
+    });
+    $(".readmore button").on("click", function() {
+        var $content = $(".fullcontent");
+        $content.toggleClass("active");
     });
 }
 
