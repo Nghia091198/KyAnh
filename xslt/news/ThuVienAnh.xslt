@@ -43,6 +43,7 @@
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                         </div>
                     </a>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </xsl:if>
@@ -75,6 +76,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </div>
                 </a>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </div>
     </xsl:template>
@@ -106,6 +108,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </div>
                 </a>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </div>
     </xsl:template>

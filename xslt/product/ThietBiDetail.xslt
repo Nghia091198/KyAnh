@@ -152,12 +152,12 @@
         <div class="tab-item" id="fruit-detail-tab-1">
             <xsl:if test="position() = 1">
                 <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
+                    <xsl:text>tab-item active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
+                    <xsl:text>tab-item active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <xsl:attribute name="id">

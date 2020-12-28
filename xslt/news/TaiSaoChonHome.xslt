@@ -10,17 +10,6 @@
         <div class="swiper-why">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="why-item">
-                            <div class="why-img">
-                                <img class="swiper-lazy swiper-lazy-loaded" src="./img/home/8.png" alt=""/>
-                            </div>
-                            <div class="why-content">
-                                <span class="blue">Hơn 10 năm </span>
-                                <span>kinh nghiệm trong ngành</span>
-                            </div>
-                        </div>
-                    </div>
                     <xsl:apply-templates select="News"></xsl:apply-templates>
                 </div>
             </div>
@@ -41,6 +30,7 @@
                 </div>
                 <div class="why-content">
                     <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </div>
