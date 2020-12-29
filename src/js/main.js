@@ -580,7 +580,7 @@ function tabActive() {
             $(contentTab).find('.readmore').show();
         }
     });
-    $(".readmore button").on("click", function() {
+    $(".readmore a").on("click", function() {
         var $content = $(".fullcontent");
         $content.toggleClass("active");
     });
