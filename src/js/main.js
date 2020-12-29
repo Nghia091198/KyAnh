@@ -291,7 +291,6 @@ function swiperInit() {
         },
     });
     var slideThumbs = new Swiper(".swiper-library .gallery-thumbs", {
-
         spaceBetween: 5,
         loop: false,
         watchSlidesVisibility: true,
@@ -419,7 +418,6 @@ function swiperInit() {
         speed: 1000,
         observer: true,
         observeParents: true,
-        slidesPerView: 'auto',
         navigation: {
             nextEl: ".swiper-about .button-next",
             prevEl: ".swiper-about .button-prev",
@@ -459,24 +457,37 @@ function swiperInit() {
             },
         },
     });
-    var galleryThumbs = new Swiper('.cosmetic-swiper .gallery-thumbs', {
-        spaceBetween: 5,
-        loop: false,
+    var galleryThumbs_2 = new Swiper('.cosmetic-swiper .gallery-thumbs-2', {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        spaceBetween: 10,
         breakpoints: {
-            300: {
-                slidesPerView: 4,
+            320: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,  
+            },
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,  
+            },
+            576: {
+                spaceBetween: 20,
+                slidesPerView: 3,
+                centeredSlides: false,  
             },
             768: {
-                slidesPerView: 3,
-                slidesPerColumn: 1,
-                direction: 'vertical',
+                spaceBetween: 30,
+                slidesPerView: 4,
+                centeredSlides: false,
+                direction: 'vertical',  
             },
             1024: {
+                spaceBetween: 30,
                 slidesPerView: 5,
-                slidesPerColumn: 1,
-                direction: 'vertical',
+                centeredSlides: false,
+                direction: 'vertical', 
             },
         },
     });
@@ -484,7 +495,48 @@ function swiperInit() {
         loop: true,
         loopedSlides: 1,
         thumbs: {
-            swiper: galleryThumbs
+            swiper: galleryThumbs_2
+        },
+    });
+    var galleryThumbs_2 = new Swiper('.cosmetic-swiper-2 .gallery-thumbs-3', {
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        clickable: true,
+        breakpoints: {
+            320: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                centeredSlides: false,  
+            },
+            460: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+                centeredSlides: false,  
+            },
+            576: {
+                spaceBetween: 20,
+                slidesPerView: 3,
+                centeredSlides: false,  
+            },
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 4,
+                centeredSlides: false,
+                direction: 'vertical',  
+            },
+            1024: {
+                spaceBetween: 30,
+                slidesPerView: 5,
+                centeredSlides: false,
+                direction: 'vertical', 
+            },
+        },
+    });
+    var galleryTop_2 = new Swiper('.cosmetic-swiper-2 .gallery-top', {
+        loop: true,
+        loopedSlides: 1,
+        thumbs: {
+            swiper: galleryThumbs_2
         },
     });
 }
@@ -528,7 +580,7 @@ function tabActive() {
             $(contentTab).find('.readmore').show();
         }
     });
-    $(".readmore button").on("click", function() {
+    $(".readmore a").on("click", function() {
         var $content = $(".fullcontent");
         $content.toggleClass("active");
     });
