@@ -4,12 +4,12 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/ProductDetail">
-        <section class="block_cosmetic-detail">
+        <section class="block_cosmetic-detail-3">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
-                        <div class="cosmetic-swiper">
-                            <div class="swiper-container gallery-thumbs">
+                        <div class="cosmetic-swiper-2">
+                            <div class="swiper-container gallery-thumbs-3">
                                 <div class="swiper-wrapper">
                                     <xsl:apply-templates select="ProductImages" mode="Thumbnail"></xsl:apply-templates>
                                 </div>
